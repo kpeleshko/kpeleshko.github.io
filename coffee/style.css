@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   font-size: 20px;
+}
+
+.content {
+    display: flex;
+}
+
+/* ///////////////////////////// 
+///////// NAVIGATION ////////*/
+
+.side-nav {
+    flex: 0 0 20%;
+    background-color: #333;
+    color: #fff;
+}
+
+.list {
+    margin: 10px;
+}
+
+.list__item {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(197, 197, 197);
+}
+
+.list__item a {
+    position: relative;
+    z-index: 10;
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.list__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: rgb(192, 84, 102);
+    transform: scaleY(0);
+    transition: transform .2s,
+                width .4s cubic-bezier(1,0,0,1) .2s,
+                background-color .1s;
+}
+
+.list__item:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+}
+
+.on {
+    background-color: rgb(192, 84, 102);
+}
+
+/* //////////////////////////////////// 
+///////// STYLE FOR ALL DRINKS ////////*/
+
+.main-part {
+    flex: 1;
+    position: relative;
+    background-color: rgb(192, 84, 102);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.nonactive {
+    display: none;
+}
+
+.plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    box-shadow: -15px 15px 55px 5px rgba(0,0,0,0.3);
+}
+
+.cup-contur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: -15px 10px 40px 5px rgba(0,0,0,0.35);
+}
+
+.cup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset -15px 15px 55px 5px rgba(221, 217, 214, .8);
+}
+
+.cup-ear {
+    z-index: 0;
+    position: absolute;
+    top: 42%;
+    left: 5%;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: inset 5px 1px 5px rgba(0, 0, 0, .1);
+}
+
+/* ///////////////////////////// 
+///////// AMERICANO ////////*/
+
+.a__coffee-contur {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background-color: #6b4d29;
+}
+
+.a__coffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #161417;
+    border: 0.1px dotted rgb(27, 18, 7);
+    box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.a__coffee-blur-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: #434343;
+}
+
+.a__coffee-blur-top-coffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 168px;
+    border-radius: 50%;
+    background-color: #161417;
+    transform: rotate(30deg) translateY(6px);
+}
+
+.a__coffee-blur-bottom {
+    position: absolute;
+    top: 67%;
+    left: 10%;
+    box-shadow: 0px 5px 15px rgba(67, 67, 67, .5);
+    height: 25px;
+    width: 70px;
+    border-radius: 40%;
+    background-color: #434343;
+    transform: rotate(223deg);
+}
+
+/* ///////////////////////////// 
+///////// CAPUCHINO //////////*/
+
+.c__coffee-contur-big {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background-color: #cdae6b;
+}
+
+.c__coffee-contur-medium {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-color: #d6ac7a;
+    box-shadow:
+                inset -10px 0px 40px 5px rgba(136, 92, 21, .9),
+                inset 10px -5px 20px rgba(247, 241, 227, .8);
+    transform: rotate(-20deg);
+}
+
+.c__coffee-contur-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 132px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: inset 3px -1px 1px rgba(247, 241, 227, .1);
+    transform: rotate(-30deg) translateX(-15px);
+}
+
+/* ///////////////////////////// 
+///////// WATER //////////*/
+
+.water-contur-big {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 100px rgba(135, 171, 218, 0.2);
+}
+
+.water-contur-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0px 0px 100px rgba(135, 171, 218, 0.1),
+                 0px 0px 4px rgba(0,0,0,0.2);
+}
