@@ -588,6 +588,7 @@ p {
     content: '';
     display: block;
     margin-top: 5rem;
+
     height: .1rem;
     width: 100%;
     background-color: #BA265D;
@@ -640,5 +641,6 @@ p {
     @media only screen and (min-width: 50em) {
       .port-item__btn {
         margin-top: 0rem; } }
+
 
 /*# sourceMappingURL=main.css.map */
