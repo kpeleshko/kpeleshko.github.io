@@ -4,21 +4,300 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>K.Peleshko</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="build/css/main.css">
+    <title>Frontend developer`s portfolio</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/coffee/index.html">Coffee</a>
-            </li>
-            <li>
-                <a href="/food/index.html">Booking</a>
-            </li>
-            <li>
-                <a href="/interior/index.html">Interior</a>
-            </li>
-        </ul>
-    </nav>
+
+    <header class="hero">
+        <div class="wrapper hero__wrapper">
+
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Kate Peleshko</span>
+                <span class="heading-primary--sub">Frontend Developer</span>
+            </h1>
+
+            <div class="hero__img-wrapper">
+                <img class="hero__img" src="../../../img/my_photo.jpg" alt="My photo">
+            </div>
+
+            
+            <div class="hero__burger-btn">
+                <span class="hero__burger-icon">&nbsp;</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero__burger-content hero__burger-content--closed">
+
+            <div class="hero__lng">
+                <a class="btn--pink btn--small margin-r-sm" href="index.html"> eng</a>
+                <a class="btn--pink btn--small" href="#">ukr</a>
+            </div>
+
+            
+            <nav class="hero__navigation">
+                <a href="#bio" class="hero__navigation-link">BIO</a>
+                <a href="#skills" class="hero__navigation-link">SKILLS</a>
+                <a href="#resume" class="hero__navigation-link">Resume</a>
+                <a href="#portfolio" class="hero__navigation-link">Portfolio</a>
+                <a href="#contact" class="hero__navigation-link">CONTACT</a>
+                
+                <!-- <svg class="social-icon social-icon--animated social-icon--color-primary ">
+                    <use xlink:href="img/sprite.svg#icon-chevron-thin-down"></use>
+                </svg> -->
+            </nav>
+
+            <div class="social">
+                <a href="https://www.linkedin.com/feed/?trk=nav_back_to_linkedin">
+                    <svg class="social-icon">
+                        <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
+                    </svg>
+                </a>
+                <a href="https://github.com/kpeleshko">
+                    <svg class="social-icon">
+                        <use xlink:href="img/sprite.svg#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/k.peleshko/?hl=ru">
+                    <svg class="social-icon">
+                        <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+                <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                    <svg class="social-icon">
+                        <use xlink:href="img/sprite.svg#icon-google2"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        
+    </header>
+
+
+    <main>
+
+        <!-- Section with main information about me: look like js object -->
+        <section id="bio" class="bio">
+            <div class="wrapper">
+                <h2 class="heading-secondary heading-secondary--center-transform  margin-bt-bg">
+                    <span class="heading-secondary--main">Bio</span>
+                    <span class="heading-secondary--sub">Something about me</span>
+                </h2>
+
+                <div class="about__wrapper">
+                    <img class="about__bg" src="/img/ipadd.png" alt="PNG frame of desktop">
+                    <div class="about">
+                        <p> <span class="about--bold"> var </span><span class="about--main-color about--bold">frontendDeveloper</span><span class="about--bold"> = { </span></p>
+                        <p class="about--margin about--bold">
+                            name: <span class="about--secondary-color">'Kate Peleshko'</span>, <br>
+                      
+                            yearOfBirth: 2000,<br>
+                        
+                            basedIn: <span class="about--secondary-color">'Ukraine'</span>,<br>
+                       
+                            crazyAbout: <span class="about--secondary-color">'Learning smth new'</span>,<br>
+                        
+                            myPetPeeve: [<span class="about--secondary-color">'being late'</span>, <span class="about--secondary-color">'slow internet'</span>],<br>
+                        
+                            values: [<span class="about--secondary-color">'sincerity'</span>, <span class="about--secondary-color">'development'</span>]
+                        </p>
+                        <p class="about--bold">}</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+      
+
+        <!-- Framework: small icons of different stuff rounding -->
+        <div class="skills" id="skills">
+            <h2 class="heading-secondary margin-bt-bg">
+                <span class="heading-secondary--main">Skills</span>
+                <span class="heading-secondary--sub">Technology I`m worked with</span>
+            </h2>
+
+            <div id="tag" class="skills__rotate-icon"></div>
+        </div>
+
+
+        <!-- Small section where is posible to download a resume -->
+        <div class="resume" id="resume">
+            <a class="resume resume__link" href="#">
+                <span class="resume__title">View my resume</span>
+                <span class="resume__text">Download</span>
+            </a>
+        </div>
+
+ 
+        <!-- There are be my best works in this section-->
+        <section id="portfolio" class="portfolio">
+            <div class="wrapper">
+                <h2 class="heading-secondary heading-secondary--center-transform  heading-secondary--color-light">
+                    <span class="heading-secondary--main">Portfolio</span>
+                    <span class="heading-secondary--sub">Some of my works</span>
+                </h2>
+
+                <div class="port-item">
+                    <h3 class="heading-tertiary heading-tertiary--color-light margin-bt-md">Booking</h3>
+                    <div class="port-item__img-wrapper">
+                        <img class="port-item__img port-item__img--desk" src="img/portfolio/booking_desk.png" alt="">
+                        <img class="port-item__img port-item__img--port" src="img/portfolio/booking_port.png" alt="">
+                        <img class="port-item__img port-item__img--phone" src="img/portfolio/booking_phone.png" alt="">
+                    </div>
+                    <div class="port-item__info">
+                        <div class="port-item__desc">
+                            <span class="port-item__skill">sass</span>
+                            <span class="port-item__skill">grid</span>
+                            <span class="port-item__skill">bem</span>
+                            <span class="port-item__skill">resolution switching</span>
+                            <p class="port-item__text">This is a website for hotel. I made it fully responsive with grid. Also I improve it using resolution switching.</p>
+                        </div>
+                        <div class="port-item__btn">
+                            <a class="btn btn--pink margin-r-sm" href="https://kpeleshko.github.io/booking/index.html"> View</a>
+                            <a class="btn btn--pink" href="https://github.com/kpeleshko/Booking">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="port-item">
+                    <h3 class="heading-tertiary heading-tertiary--color-light margin-bt-md">Interior</h3>
+                    <div class="port-item__img-wrapper">
+                        <img class="port-item__img port-item__img--desk" src="img/portfolio/interior_desk.png" alt="">
+                        <img class="port-item__img port-item__img--port" src="img/portfolio/interior_port.png" alt="">
+                        <img class="port-item__img port-item__img--phone" src="img/portfolio/interior_phone.png" alt="">
+                    </div>
+                    <div class="port-item__info">
+                        <div class="port-item__desc">
+                            <span class="port-item__skill">sass</span>
+                            <span class="port-item__skill">flexbox</span>
+                            <span class="port-item__skill">bem</span>
+                            <span class="port-item__skill">jQuery</span>
+                            <span class="port-item__skill">npm</span>
+                            <p class="port-item__text"> This is a website for room designer company. I made it fully responsive with flexbox. Gallery of images I create using jQuery plugin (slick).</p>
+                        </div>
+                        <div class="port-item__btn">
+                            <a class="btn btn--pink margin-r-sm" href="https://kpeleshko.github.io/interior/index.html"> View</a>
+                            <a class="btn btn--pink" href="https://github.com/kpeleshko/interior">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="port-item">
+                    <h3 class="heading-tertiary heading-tertiary--color-light margin-bt-md">Food</h3>
+                    <div class="port-item__img-wrapper">
+                        <img class="port-item__img port-item__img--desk" src="img/portfolio/food_desk.png" alt="">
+                        <img class="port-item__img port-item__img--port" src="img/portfolio/food_port.png" alt="">
+                        <img class="port-item__img port-item__img--phone" src="img/portfolio/food_phone.png" alt="">
+                    </div>
+                    <div class="port-item__info">
+                        <div class="port-item__desc">
+                            <span class="port-item__skill">sass</span>
+                            <span class="port-item__skill">pixel perfect</span>
+                            <span class="port-item__skill">flexbox</span>
+                            <span class="port-item__skill">bem</span>
+                            <p class="port-item__text"> This is a website for restaurant. I made it fully responsive with flexbox. Also it is pixel perfect with PSD version.</p>
+                        </div>
+                        <div class="port-item__btn">
+                            <a class="btn btn--pink margin-r-sm" href="https://kpeleshko.github.io/food/index.html"> View</a>
+                            <a class="btn btn--pink" href="https://github.com/kpeleshko/Food-site">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="contact">
+            <div class="wrapper contact__wrapper">
+                <h2 class="heading-secondary heading-secondary--center-grid margin-bt-bg">
+                    <span class="heading-secondary--main">Contact</span>
+                    <span class="heading-secondary--sub">Choose comfortable way for you</span>
+                </h2>
+
+
+                <!-- All information about how to contact with me -->
+                <div class="connect">
+                    <h3 class="heading-tertiary">Connect</h3>  
+                    <p class="connect__text">I’m currently available for a work.</p>
+                    
+                    <div class="connect__copy">
+                        <a class="connect__copy-link" href="#">
+                            <svg class="connect__copy-icon">
+                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <span class="connect__copy-info">+380936601407</span>
+                        </a>
+                        <a class="connect__copy-link" href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                            <svg class="connect__copy-icon">
+                                <use xlink:href="img/sprite.svg#icon-envelop"></use>
+                            </svg>
+                            <span class="connect__copy-info"> ka.peleshko@gmail.com</span>
+                        </a>
+                    </div>
+                    
+                    <div class="social connect__social">
+                        <a href="https://www.linkedin.com/feed/?trk=nav_back_to_linkedin">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/kpeleshko">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-github"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/k.peleshko/?hl=ru">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-google2"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <!-- Form to connect -->
+                <div class="form__wrapper">
+                    <form action="#" class="form">
+                        
+                        <h3 class="heading-tertiary">Send a<br>message</h3>
+                        
+                        <div class="form__content">
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Full name" id="name">
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Email address" id="email">
+                                <label for="email" class="form__label">Email address</label>
+                            </div>
+                            <div class="form__group">
+                                <textarea name="message" id="message" placeholder="Type message here" class="form__input form__input--textarea"></textarea>
+                                <label for="message" class="form__label">Message</label>
+                            </div>
+                            <div class="form__group form__group-btn">
+                                <button class="btn btn--pink">send form &rarr;</button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="jquery.svg3dtagcloud.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
