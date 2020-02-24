@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="wrapper">
+    <div class="game-field">
+
+        <div class="final-message__wrapper">
+            <h1 class="final-message"></h1>
+            <span class="btn__new">X</span>
+        </div>
+        
+        <div class="all-cards">
+            <span class="start-game">start the game <br> &#8595</span>
+            <img src="img/gray_back.png" alt="">
+        </div>
+
+        <div class="game-panel__wrapper">
+            <div class="game-panel game-panel__player">
+                <span class="name" id="player__name">Player: </span>
+                <span class="score" id="player__score">1</span>
+                <!-- <div class="player__cards"> -->
+                    <img class="card player__card-1" src="">
+                    <img class="card player__card-2" src="">
+                    <img class="card player__card-3" src="">
+                <!-- </div> --> 
+            </div>
+            
+            <div class="game-panel game-panel__dealer">
+                <span class="name" id="dealer__name">dealer: </span>
+                <span class="score" id="dealer__score">2</span>
+                <div class="dealer__card-wrapper">
+                    <img class="card dealer__card-1" src="">
+                    <img class="card dealer__card-2" src="">
+                </div>
+            </div>
+        </div>
+
+        <div class="btn__wrapper">
+            <button class="btn btn__add">Add card</button>
+            <button class="btn btn__show">Compare</button>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
