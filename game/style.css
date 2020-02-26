@@ -8,7 +8,6 @@ body {
     color: #222;
     background-color: #222;
     overflow-x:hidden;
-    // transition: scale 1s ease-in-out;
 }
 
 @font-face {
@@ -32,6 +31,15 @@ body {
     }
     100% {
         scale: 1;
+    }
+}
+
+@keyframes scoreScale {
+    0% {
+        scale: 0;
+    }
+    50% {
+        scale: 1.5;
     }
 }
 
@@ -109,7 +117,7 @@ body {
 
 .player__card-1 { animation: playerCard1 .6s ease-out forwards;}
 .player__card-2 { animation: playerCard2 .6s .1s ease-out forwards;}
-.player__card-3 { animation: playerCard3 .6s .1s ease-out forwards;}
+.player__card-3 { animation: playerCard3 .6s ease-out forwards;}
 .dealer__card-1 { animation: dealerCard1 .6s .1s ease-out forwards;}
 .dealer__card-2 { animation: dealerCard2 .6s .1s ease-out forwards;}
 
@@ -139,7 +147,8 @@ body {
     align-self: center;
     background-color: #eee;
     border-radius: .2rem;
-    box-shadow: 0 0 3rem 2rem rgba(112, 12, 47, .5);
+    border: 1px solid rgb(112, 12, 47);
+    box-shadow: 0 0 1rem .3rem rgba(247, 211, 224, 0.5);
     animation: scale 1s ease-out;
 }
 
@@ -175,10 +184,17 @@ body {
 
 .name,
 .score {
+    display: inline-block;
     font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
     color: #ccc;
+}
+
+.score--scale {
+    color: rgb(158, 46, 85);
+    margin: 0 1rem;
+    animation: scoreScale .7s ease-out infinite;
 }
 
 img {
@@ -286,7 +302,7 @@ img:nth-child(3) {
     text-align: center;
     background-color: rgb(112, 12, 47);
     border: .1px solid #ccc;
-    box-shadow: 0 0 1.5rem 1.5rem rgba(112, 12, 47, .8);
+    box-shadow: 0 0 1.5rem 1rem rgba(112, 12, 47, .8);
     color: #ccc;
     animation: infinit infinite 1s;
     cursor: pointer;
