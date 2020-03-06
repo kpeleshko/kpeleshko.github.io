@@ -3,10 +3,7 @@ document.querySelector('.hero__burger-btn').addEventListener('click', function()
 	document.querySelector('.hero__burger-icon').classList.toggle('hero__burger-icon--closed');
 });
 
-
-
 $(document).ready(function(){ 
-
     var entries = [  
         { image: 'img/skills/html.svg', width: '50', height: '50', tooltip: 'HTML', target: '_top' }, 
         { image: 'img/skills/js.svg', width: '50', height: '50', tooltip: 'JavaScript', target: '_top' }, 
@@ -55,7 +52,3 @@ $(document).ready(function(){
 
     $('#tag').svg3DTagCloud(settings);
 })
-
-// //burgerMenu
-
-
