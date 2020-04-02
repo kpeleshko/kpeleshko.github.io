@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Asterisk: спикерам</title>
+  <link rel="shortcut icon" href="../img/icons/logo.png" type="image/png">
+  <link href="css/style-min.css" rel="stylesheet">
+  <style>
+  .displayDisplay {
+    display: block !important;
+  }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="container">
+        <div class="page-header__wrapper-top">
+          <a class="logo">
+            <img class="logo__img" src="img/footer-logo.png" width="120" height="22" alt="logo Asterisk">
+          </a>
+
+          <p class="page-header__text">Конференция Asterisk - событие, которое нельзя пропустить!</p>
+
+          <button class="burger  burger--open" type="button">Меню</button>
+          <nav class="main-menu">
+            <ul class="main-menu__list">
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Главная</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Программа</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Где и когда</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Стоимость</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link  main-menu__link--active">Спикерам</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="sponsoram.html">Спонсорам</a>
+              </li>
+              <li class="main-menu__item">
+                <a class="main-menu__link" href="#">Иногородним</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <section class="intro">
+      <div class="container">
+        <div class="intro__wrapper">
+          <div class="intro__info">
+            <div class="intro__info-wrapper">
+              <p class="intro__text  intro__text--data">XX-YY сентября 2017</p>
+              <p class="intro__text  intro__text--location">в Москве</p>
+            </div>
+            <a class="intro__text  intro__text--translated">Онлайн-трансляция по всему миру</a>
+          </div>
+
+          <a class="btn  btn--plus  intro__btn" href="#">Получить билет</a>
+        </div>
+
+        <div class="intro__main-wrapper">
+          <h1 class="intro__title">Являетесь экспертом?</h1>
+          <p class="intro__descriprion">У вас есть интересная тема, которая может быть полезна специалистам по Asterisk?</p>
+          <h2 class="intro__subtitle">Приглашаем вас выступить в качестве спикера на конференции.</h2>
+          <a class="btn  btn--plus  intro__btn--plus" href="#">Принять участие</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <form class="main-form" action="/">
+        <h3 class="main-form__title">Форма заявки</h3>
+
+        <label class="main-form__label  main-form__label--name">
+          <span class="visually-hidden">Имя</span>
+          <input class="main-form__input" type="text" name="first-name" placeholder="Имя" required>
+        </label>
+        <label class="main-form__label  main-form__label--email">
+          <span class="visually-hidden">Почта</span>
+          <input class="main-form__input" type="email" name="email" placeholder="Ваша почта" required>
+        </label>
+        <label class="main-form__label  main-form__label--phone">
+          <span class="visually-hidden">Телефон</span>
+          <input class="main-form__input" type="text" name="phone" placeholder="Ваш телефон" required>
+        </label>
+        <label class="main-form__label  main-form__label--name-rept">
+          <span class="visually-hidden">Название доклада</span>
+          <textarea class="main-form__textarea" name="name-rept" rows="1" placeholder="Название доклада:"></textarea>
+        </label>
+        <label class="main-form__label  main-form__label--textarea">
+          <span class="visually-hidden">Описание доклада</span>
+          <textarea class="main-form__textarea  main-form__textarea--descriprion" name="description" placeholder="Описание доклада"></textarea>
+        </label>
+
+        <button class="main-form__btn  main-form__btn--expand">Развернуть</button>
+        <input class="btn  main-form__btn--send" type="submit" value="Отправить">
+
+        <label class="main-form__label  main-form__label--agreement">
+          <input class="main-form__checkbox" type="checkbox" name="agreement" required>
+          <span class="main-form__text  main-form__text--agreement">Соглашение об обработке персональных данных</span>
+        </label>
+      </form>
+    </div>
+
+    <div class="page-main__wrapper  page-main__wrapper--first  page-main__wrapper--bg">
+      <div class="container">
+        <section class="required-info">
+          <h3 class="title  required-info__title">
+            <span class="title__text">Что важно!</span>
+          </h3>
+
+          <div class="required-info__wrapper">
+            <p class="required-info__text">Ваш доклад должен быть полезен и применим участниками конференции. Мы не одобряем докладов про «сферических коней в вакууме». Также мы против рекламы в своих выступлениях. Прямо или косвенно рекламировать свои продукты могут только спонсоры, их совсем немного. Если хочется войти в их состав – смотрите на странице «Спонсорам».</p>
+            <p class="required-info__text  required-info__text--strong">
+              Мероприятие пройдет в сентябре года в Москве в
+              <a class="required-info__text-link" href="#">КРЦ Gagarin Space, </a>
+              Москва, <br>Ярославское шоссе, 124.
+            </p>
+            <p class="required-info__text">
+              <span class="required-info__text  required-info__text--bold">Организаторы и активисты конференции —</span> сотрудники крупнейших компаний интеграторов  Asterisk, лидеры сообщества VoIP-разработчиков и различных тематических сообществ.
+            </p>
+          </div>
+
+          <img class="required-info__img" src="img/bg-features.jpg" width="590" alt="AsterConf">
+        </section>
+
+        <section class="themes">
+          <h3 class="title  themes__title">
+            <span class="title__text">Как выбрать тему?</span>
+          </h3>
+          <div class="themes__wrapper">
+            <p class="themes__text  themes__text--align">Опираясь на результаты опроса участников прошлой конференции мы определили наиболее интересные для публики темы:</p>
+            <ul class="themes__list">
+              <li class="themes__item">Безопасность</li>
+              <li class="themes__item">Программирование</li>
+              <li class="themes__item">Отказоустойчивость</li>
+              <li class="themes__item">Траблшутинг</li>
+              <li class="themes__item">Новые возможности</li>
+              <li class="themes__item">Масштабируемость</li>
+              <li class="themes__item">Обмен опытом</li>
+              <li class="themes__item">Бизнес</li>
+              <li class="themes__item">Мини-обучение</li>
+              <li class="themes__item">Демонстрация оборудования</li>
+            </ul>
+            <p class="themes__text">Эти списки призваны подсказать направление мыслей, <span class="themes__text  themes__text--bold">но никоим образом не стоит воспринимать их как фиксированный список допустимого — вы вольны выбирать любую тему.</span></p>
+            <p class="themes__text">Если какой-то конкретной темы в заявленном списке нет, но Вы считаете, что доклад попадает под тематику конференции — смело подавайте заявку и вступайте в дискуссию с Программным комитетом. Мы открыты!</p>
+
+            <a class="btn  btn--plus" href="#">Подать заявку</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="tutorial">
+      <div class="tutorial__video-wrapper">
+        <div class="container">
+          <div class="tutorial__info">
+            <h2 class="title  tutorial__title-video">
+              <span class="title__text  title__text--video">Что такое хорошее выступление?</span>
+            </h2>
+            <p class="tutorial__text  tutorial__text--color">То, которое экономит слушателю время! Чем больше времени сэкономлено, тем лучше. Прямая передача опыта, результатов исследований, знаний, накопленных за месяцы и годы работы - вот это и есть хороший доклад. Если вы любите выступать, но наверняка знакомы с текстом <a class="tutorial__text-link" href="#">Стаса Фомина</a> и видео <a class="tutorial__text-link" href="#">Радислава Гандапаса</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <iframe class="video__iframe" width="100%"
+          src="https://www.youtube.com/embed/XGSy3_Czz8k">
+        </iframe>
+
+        <button class="video__btn">Играть</button>
+      </div>
+      <div class="container">
+        <div class="tutorial__main-wrapper">
+          <article class="tutorial__item">
+            <div class="tutorial__wrapper">
+              <h3 class="title  title--align">
+                <span class="title__text">Формат выступления</span>
+              </h3>
+              <p class="tutorial__text  tutorial__text--bold">Существует два формата для выступления —</p>
+
+              <ul class="tutorial__list">
+                <li class="tutorial__list-item">доклад до 30 минут <span class="tutorial__list-item  tutorial__list-item--lover">(включая вопросы и ответы)</span></li>
+                <li class="tutorial__list-item">и мастер-класс до 60 минут.</li>
+              </ul>
+
+              <p class="tutorial__text">Доклад будет проходить в аудитории от 200 до 250 человек, в зависимости от интереса, который проявят участники конференции к вашему выступлению. Мастер-класс предполагает более камерную обстановку, залы мастер-классов рассчитаны до 50 человек.</p>
+              <p class="tutorial__text">Доклады классифицируются еще и по коммерческому признаку, если ваш доклад в скрытой или явной форме содержит рекламу, то вы будете выступать на спонсорских условиях, которые оговариваются отдельно.  Если ваш доклад носит информативный и общественно-полезный  характер, то вы участвуете в конференции бесплатно,  как комьюнити-спикер</p>
+            </div>
+          </article>
+
+          <article class="tutorial__item">
+            <div class="tutorial__wrapper">
+              <h3 class="title  title--align">
+                <span class="title__text">Заявка на доклад</span>
+              </h3>
+            <h4 class="tutorial__subtitle">Тему выступления необходимо выбрать до 15 августа.<h4>
+              <p class="tutorial__text">У нас действует система работы Программного комитета и докладчиков над докладами. Вы выбираете тему выступления и подаёте её через <a class="tutorial__text-link" href="">форму</a>.</p>
+                <p class="tutorial__text">Доклад попадает в списки заявок и его видят все члены Программного комитета. Они будут задавать вопросы, уточнять, критиковать и рекомендовать. Вы будете отвечать, уточнять, разъяснять и принимать к сведению. Так в процессе дискуссии родится идеальное выступление :)</p>
+              <p class="tutorial__text">До 23  августа вы получите уведомление о включении в Программу конференции и фестиваля. В Программу попадают не все заявки — обычно конкурс на выступления составляет у нас от 2 до 4 человек на место. Решение о включении принимается Программным комитетом в кулуарных закрытых обсуждениях. По этой причине, чем раньше вы подадите заявку на выступление — тем лучше, тем больше времени будет у вас и Программного комитета для улучшения доклада.</p>
+            </div>
+          </article>
+
+          <article class="tutorial__item">
+            <div class="tutorial__wrapper">
+              <h3 class="title  title--align">
+                <span class="title__text">Меня приняли!</span>
+              </h3>
+              <h4 class="tutorial__subtitle  tutorial__subtitle--margin">С 15 августа</h4>
+              <p class="tutorial__text">начинается коучинговая работа с докладчиком. Специальные коучи по публичным выступлениям, подготовке презентации, а также профессионалы по теме вашего доклада будут работать с вами над презентацией и выступлением.</p>
+              <p class="tutorial__text">Такая работа состоит из нескольких <span class="tutorial__text  tutorial__text--bold">skype-бесед, прогонов, вебинаров и даже очной тренировки накануне мероприятия.</span></p>
+            </div>
+          </article>
+
+          <article class="tutorial__item">
+            <div class="tutorial__wrapper">
+              <h3 class="title  title--align">
+                <span class="title__text">Условия участия</span>
+              </h3>
+              <p class="tutorial__text">Спикеры конференции имеют право бесплатного участия в конференции.</p>
+              <p class="tutorial__text">Для спикеров, приезжающих из других городов – в качестве дополнительного поощрения организаторами оплачивается участие в банкете.</p>
+              <p class="tutorial__text">Вся тренинговая активность по подготовке доклада также проходит за счёт организаторов конференции.</p>
+              <p class="tutorial__text">Мы постарались сделать так, чтобы ничего не могло помешать вам представить ваши знания и опыт нашим слушателям.</p>
+            </div>
+          </article>
+
+          <article class="tutorial__item">
+            <div class="tutorial__wrapper  tutorial__wrapper--width">
+              <h3 class="title  title--align  tutorial__title">
+                <span class="title__text">Порядок отбора докладов</span>
+              </h3>
+              <p class="tutorial__text">Все тезисы каждой из конференций попадают на обсуждение инициативной группе, которая обсуждает, выдвигает предложения, вступает в переписку с потенциальным докладчиком, оттачивая тему выступления. В дискуссии будет участвовать множество людей, <span class="tutorial__text  tutorial__text--bold">обсуждения проходят в блогах, на сайтах конференций, в списках рассылок</span>. Для стимулирования интереса и обсуждения присланных заявок на доклады проводятся собрания докладчиков.</p>
+              <p class="tutorial__text">Но конечное решение принимает небольшая закрытая группа гуру, которая и несет ответственность за качество выступлений. Каждый участник <span class="tutorial__text  tutorial__text--bold">Программного комитета</span> является носителем духа конференции, хорошо представляет ее цели, обладает широким кругозором и является высококлассным специалистом в какой-то из тем конференции.</p>
+              <p class="tutorial__text  tutorial__text--size">Это позволит нам сформировать целостную качественную гармоничную программу, отвечающую потребностям участников и компаний-партнеров.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="recomendations">
+      <div class="container">
+        <h3 class="title  recomendations__title">
+          <span class="title__text">Рекомендации докладчикам</span>
+        </h3>
+
+        <div class="recomendations__wrapper">
+          <article class="recomendations__item">
+            <h4 class="recomendations__subtitle">Вот требования к докладам, которые необходимо учесть, все эти правила вводятся для улучшения качества докладов и выступлений:</h4>
+            <ul class="recomendations__list">
+              <li class="recomendations__list-item">крайне желательно, чтобы доклад был уникальным, нигде ранее не представленным и не публиковавшимся;</li>
+              <li class="recomendations__list-item">в докладе не допускается презентация компании, крайне нежелательно упоминание ее продукции без согласования с Программным комитетом;</li>
+              <li class="recomendations__list-item">не допускается негативная оценка деятельности других компаний.</li>
+            </ul>
+          </article>
+          <article class="recomendations__item">
+            <h4 class="recomendations__subtitle">В 2017 году докладчики должны быть готовы к следующему:</h4>
+            <ul class="recomendations__list">
+              <li class="recomendations__list-item">Ключевые докладчики и докладчики с открытия и закрытия конференции будут приглашены для репетиций, которые пройдут накануне мероприятия;</li>
+              <li class="recomendations__list-item">Будет проведена серия тренингов по публичным выступлениям и презентациям для докладчиков конференции;</li>
+              <li class="recomendations__list-item">Программный комитет перед принятием решения о Программе может затребовать видео-презентацию докладчика.</li>
+            </ul>
+          </article>
+          <article class="recomendations__item">
+            <h4 class="recomendations__subtitle">Из общих рекомендаций мы бы выделили следующие:</h4>
+            <ul class="recomendations__list">
+              <li class="recomendations__list-item">рассматривайте тему глубоко, речь идет о профессиональной конференции;</li>
+              <li class="recomendations__list-item">обзорные доклады допускаются только по согласованию с Программным комитетом;</li>
+              <li class="recomendations__list-item">если технология, алгоритм или продукт уже открыто представлены на рынке, то мы рекомендуем докладчикам считать, что Ваши слушатели уже знакомы с ними. Это позволит Вам избежать ошибок и полупустых залов.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="recomendations__text">Во всех выступлениях следует минимизировать прямую рекламу своей компании — пусть качество Вашего доклада будет лучшим сигналом о том, что на Вас стоит обратить внимание.</p>
+        <p class="recomendations__text  recomendations__text--size">Будем рады ответить на Ваши вопросы!</p>
+      </div>
+    </section>
+
+    <div class="page-main__wrapper-bg">
+      <div class="container">
+        <div class="page-main__wrapper  page-main__wrapper--second">
+          <section class="question">
+            <div class="question__wrapper">
+              <h3 class="title  title--width  question__title">
+                <span class="title__text">Часто задаваемые вопросы</span>
+              </h3>
+              <div class="question__item">
+                <h5 class="question__subtitle">Некоторые интересные мне доклады будут идти в обоих залах. Как быть?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Выберите тот, что интереснее и присутствуйте на нем лично. А второй - посмотрите позже в записи.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Будут ли доступны видео-записи с конференции?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Участие будет оплачиваться от компании. Можно ли не указывать «банкет» отдельной </h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Я приеду из другого города. Как мне не заблудиться в Москве?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Бухгалтерия просит Счет и Договор в оригинале. Можно ли их получить?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Можно ли будет пообщаться со спикером после выступления?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+              <div class="question__item">
+                <h5 class="question__subtitle">Что нужно иметь с собой для посещения?</h5>
+                <button class="question__btn">Открыть</button>
+                <p class="question__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, et dignissimos sapiente fuga facere libero tempora sit neque blanditiis suscipit officiis error eveniet, distinctio dicta enim nisi consequuntur animi possimus.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="feedback">
+            <h3 class="title  feedback__title">
+              <span class="title__text">Остались вопросы?</span>
+            </h3>
+            <div class="feedback__wrapper">
+              <form class="feedback__form" action="/">
+                <label class="feedback__label  feedback__label--name">
+                  <span class="visually-hidden">Ваше имя</span>
+                  <input class="input-cus  input-cus--bg" type="text" name="name" placeholder="Ваше имя" required>
+                </label>
+                <label class="feedback__label  feedback__label--email">
+                  <span class="visually-hidden">Ваша почта</span>
+                  <input class="input-cus  input-cus--bg" type="email" name="email" placeholder="Ваша почта" required>
+                </label>
+                <label class="feedback__label  feedback__label--textarea">
+                  <span class="visually-hidden">Задайте вопрос</span>
+                  <textarea class="input-cus  input-cus--bg  input-cus--textarea" name="question" rows="18" placeholder="Задайте вопрос" required></textarea>
+                </label>
+                <input class="btn  feedback__btn  feedback__btn--send" type="submit" value="Отправить">
+
+                <label class="feedback__label  feedback__label--agreement">
+                  <input class="feedback__checkbox" type="checkbox" name="agreement2" required>
+                  <span class="feedback__text  feedback__text--agreement">Соглашение об обработке персональных данных</span>
+                </label>
+              </form>
+
+              <div class="feedback__user">
+                <img class="feedback__user-img" src="img/user-icon.png" width="150" height="150" alt="user">
+                <cite class="feedback__user-name">Мярьяна Лучук</cite>
+                <span class="feedback__user-text">руководитель конференции</span>
+
+                <a class="feedback__link" href="tel:+7921xxx-хх-хх">+7 (921) xxx-хх-хх</a>
+                <a class="feedback__link" href="mailto:test@email.ru">test@email.ru</a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="price-list">
+          <h3 class="title">
+            <span class="title__text">Стоимость и бронирование</span>
+          </h3>
+
+          <div class="price-list__main-wrapper">
+            <div class="price-list__second-wrapper">
+              <div class="price-list__header">
+                <h4 class="price-list__subtitle">Заполните контактную информацию (шаг 1 из 4)</h4>
+              </div>
+              <form class="price-list__form" action="/">
+                <div class="price-list__wrapper-form">
+                  <div class="price-list__wrapper">
+                    <h5 class="price-list__legend  price-list__legend--info">Ваши данные</h5>
+                    <label class="price-list__label  price-list__label--full-name  price-list__label--required">
+                      <span class="visually-hidden">ФИО</span>
+                      <input class="price-list__input" type="text" name="name" placeholder="ФИО" required>
+                    </label>
+                    <label class="price-list__label  price-list__label--email">
+                      <span class="visually-hidden">Электонная почта</span>
+                      <input class="price-list__input" type="email" name="email" placeholder="Электронная почта">
+                    </label>
+                    <label class="price-list__label  price-list__label--phone  price-list__label--required">
+                      <span class="visually-hidden">Телефон</span>
+                      <input class="price-list__input" type="text" name="phone" placeholder="Телефон" required>
+                    </label>
+                  </div>
+
+                  <div class="price-list__wrapper  price-list__wrapper--radio">
+                    <h5 class="price-list__legend  price-list__legend--radio">Участие</h5>
+                    <label class="price-list__label  price-list__label--radio  price-list__label--radio-one">
+                      <input class="price-list__radio" type="radio" name="participation" value="one day">
+                      <span class="price-list__radio-text">1 день</span>
+                    </label>
+                    <label class="price-list__label  price-list__label--radio  price-list__label--radio-two">
+                      <input class="price-list__radio" type="radio" name="participation" value="two day">
+                      <span class="price-list__radio-text">2 дня</span>
+                    </label>
+                    <label class="price-list__label  price-list__label--radio  price-list__label--radio-online">
+                      <input class="price-list__radio" type="radio" name="participation" value="online" checked>
+                      <span class="price-list__radio-text">Онлайн трансляция</span>
+                    </label>
+                  </div>
+
+                  <div class="price-list__wrapper  price-list__wrapper--tickets">
+                    <label class="price-list__label">
+                      <span class="price-list__legend  price-list__legend--tickets">Количество билетов:</span>
+                      <select class="price-list__select" name="tickets">
+                        <option class="price-list__option" value="1">1</option>
+                        <option class="price-list__option" value="2">2</option>
+                        <option class="price-list__option" value="3">3</option>
+                        <option class="price-list__option" value="4">4</option>
+                        <option class="price-list__option" value="5">5</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <button class="price-list__btn  btn">Дальше</button>
+                </div>
+              </div>
+
+              <div class="price-list__footer">
+                <div class="price-list__wrapper  price-list__wrapper--price">
+                  <span class="price-list__text  price-list__text--totals">Итого:</span>
+                  <span class="price-list__text  price-list__text--finish">
+                    1 900 <span class="price-list__text--finish-small">руб.</span>
+                  </span>
+
+                  <div class="price-list__finish-info">
+                    <span class="price-list__finish-text  price-list__finish-text--name">Онлайн-трансляция</span>
+                    <span class="price-list__finish-text  price-list__finish-text--price">
+                      <span class="price-list__finish-text--normal">1900</span>
+                      <span class="price-list__finish-text--small">руб.</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="price-list__wrapper  price-list__wrapper--submit">
+                  <input class="btn  price-list__btn--send" type="submit" value="Получить билет">
+
+                  <label class="price-list__label  price-list__label--agreement">
+                    <input class="price-list__checkbox" type="checkbox" name="agreement3" required>
+                    <span class="price-list__text  price-list__text--agreement">Соглашение об обработке персональных данных</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="map">
+      <a class="map__link" title="Открыть карту" href="https://www.google.com.ua/maps/place/%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+124,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+%D0%A0%D0%BE%D1%81%D1%96%D1%8F,+129347/data=!4m2!3m1!1s0x46b53156a19e64fd:0xae3e08d45b946654?sa=X&ved=0ahUKEwjR-fiCkf_UAhVIOJoKHXsEAuEQ8gEIIzAA">Ярославское шоссе 124</a>
+
+      <div class="container">
+        <address class="address-card">
+          <p class="address-card__title">Контакты</p>
+          <p class="address-card__info  address-card__info--bg">г. Москва, Ярославское ш., 124</p>
+          <p class="address-card__number  address-card__number--bg">+7 (495) 373-64-23</p>
+          <p class="address-card__sub-number">звонки по Москве</p>
+          <p class="address-card__number">+7 (495) 373-64-23</p>
+          <p class="address-card__sub-number">звонки по России</p>
+          <a class="btn  address-card__btn  address-card__btn--adobe" href="#">
+            <span class="btn__text">скачать схему проезда</span>
+          </a>
+          <a class="btn  btn--plus  address-card__btn" href="#">
+            <span class="btn__text">cкачать презентацию</span>
+          </a>
+          <a class="btn  btn--plus  address-card__btn" href="#">
+            <span class="btn__text">скачать схему оплаты</span>
+          </a>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__wrapper">
+        <a class="logo  logo--footer">
+          <img class="logo__img" src="img/footer-logo.png" width="120" height="22" alt="logo Asterisk">
+        </a>
+
+        <p class="page-footer__item">Будущее телефонии <br> уже наступило</p>
+
+        <div class="page-footer__center-block">
+          <img class="page-footer__center-logo" width="100" height="24" src="img/logo2.png" alt="voxlink">
+          <p class="page-footer__center-info">Группа компаний VoxLink <br> © 2017 Voxlink</p>
+        </div>
+
+        <a class="page-footer__link" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/main-js-min.js" type="text/javascript"></script>
+</body>
+</html>
