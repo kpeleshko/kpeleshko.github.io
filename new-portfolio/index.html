@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300&family=Niconne&family=Yellowtail&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    
+    
+    <div class="nav__wrapper">
+        <nav class="nav">
+            <div class="nav__img-wrapper">
+                <img src="img/my_photo.jpg" alt="My photo" class="nav__img">
+            </div>
+            <span class="nav__img-desc">Kate<br>Peleshko</span>
+            <div class="nav__list">
+                <a class="nav__link link-underline" href="#about-me">about me</a>
+                <a class="nav__link link-underline" href="#portfolio">portfolio</a>
+                <a class="nav__link link-underline" href="#condition">conditions</a>
+                <a class="nav__link link-underline" href="#contact">contact</a>
+            </div>
+        </nav>
+        
+    </div>
+
+    
+    <div class="section-title-wrapper">
+        <h2 class="section-title section-title--small-mr">
+            <span class="section-title__text section-title__text--left">frontend frontend frontend frontend frontend frontend</span>
+            <span class="section-title__text section-title__text--blank section-title__text--right">developer developer developer developer developer developer developer developer</span>
+        </h2>
+    </div>
+
+    <main>
+        <section id="about-me" class="section-about section">
+            <div class="wrapper--grid-2-col">
+                <a class="round-text-btn" href="img/skills/CV.pdf">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                        <title>resume</title>
+                        <defs>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
+                                <animateTransform
+                                    attributeName="transform"
+                                    begin="0s"
+                                    dur="30s"
+                                    type="rotate"
+                                    from="0 250 250"
+                                    to="360 250 250"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </defs>
+                        <text dy="0" textLength="1220">
+                            <textPath xlink:href="#textcircle">Here is my resume.</textPath>
+                        </text>
+                    </svg>
+                </a>
+                <p class="paragraph sticky-to">Hello! 
+                    I`m Kate Peleshko,<br>
+                    designer <span class="paragraph--blank">&&</span> front-end developer. 
+                    Interactivity and technology, the two fields I grow and improve every day, while also taking on freelance projects that pique my interest. 
+                </p>
+            </div>
+        </section>
+
+        
+
+        <section class="section-portfolio">
+            <div class="section-portfolio__wrapper">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">
+                        <span class="section-title__text">portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio</span>
+                        <span class="section-title__text section-title__text--blank">skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills skills</span>
+                    </h2>
+                </div>
+    
+                <div class="section-portfolio__content portfolio section" id="portfolio" >
+                    <!-- <div class="portfolio__navigation"> -->
+                        <!-- <a href="#" class="portfolio__link" onmouseover="changeImg('link1', 'link2', 'link3')" onmouseout="removeImg()">Burger cafe</a> -->
+                        <a href="#" class="portfolio__link" onmouseover="changeImg('img/interior_desk.png', 'img/interior_port.png', 'img/interior_phone.png')" onmouseout="removeImg()">Interior</a>
+                        <a href="#" class="portfolio__link" onmouseover="changeImg('img/food_desk.png', 'img/food_port.png', 'img/food_phone.png')" onmouseout="removeImg()">Food</a>
+                        <a href="#" class="portfolio__link" onmouseover="changeImg('img/booking_desk.png', 'img/booking_port.png', 'img/booking_phone.png')" onmouseout="removeImg()">Booking</a>
+                        <!-- <a href="#" class="portfolio__link" onmouseover="changeImg('link5', 'link2', 'link3')" onmouseout="removeImg()">Sport gym</a> -->
+
+                        <div class="portfolio__img-wrapper portfolio__img-wrapper--small" data-rate="1" data-direction="vertical">
+                            <img class="portfolio__img portfolio__img--small" src="" alt=""> 
+                        </div>
+                        <div class="portfolio__img-wrapper portfolio__img-wrapper--medium" data-rate="0" data-direction="vertical">
+                            <img class="portfolio__img portfolio__img--medium" src="" alt=""> 
+                        </div>
+                        <div class="portfolio__img-wrapper portfolio__img-wrapper--large" data-rate="-2" data-direction="vertical">
+                            <img class="portfolio__img portfolio__img--large" src="" alt=""> 
+                        </div>
+                    <!-- </div> -->
+        
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section-work">
+            <div class="section-title-wrapper">
+                <h2 class="section-title">
+                    <span class="section-title__text">work work work work work work work work work work work work work work work work work work work work</span>
+                    <span class="section-title__text section-title__text--blank">steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps steps </span>
+                </h2>
+            </div>
+
+            <div class="section-work__content wrapper--grid-2-col">
+                <a class="round-text-btn round-text-btn--sticky" href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+                        <title>Details</title>
+                        <defs>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle">
+                                <animateTransform
+                                    attributeName="transform"
+                                    begin="0s"
+                                    dur="30s"
+                                    type="rotate"
+                                    from="0 200 200"
+                                    to="360 200 200"
+                                    repeatCount="indefinite" />
+                            </path>
+                        </defs>
+                        <text dy="0" textLength="1220">
+                            <textPath xlink:href="#textcircle">Get details & prising.</textPath>
+                        </text>
+                      </svg>
+                </a>
+
+                <div class="steps sticky-to section" id="condition">
+                    <div class="steps__item fade-in">
+                        <span class="steps__number">#1</span>
+                        <h3 class="steps__title paragraph">Short briefing</h3>
+                        <span class="steps__desc">I work with PDF or Figma design. Also we talk about goals, deadlines...</span>
+                    </div>
+
+                    <div class="steps__item fade-in">
+                        <span class="steps__number">#2</span>
+                        <h3 class="steps__title paragraph">Developing</h3>
+                        <span class="steps__desc">Here your website starting going life. I create it with 
+                            <a href="img/skills/html.jpg" class="steps__skills-link">
+                                HTML
+                                <img src="img/skills/html.jpg" alt="" class="steps__skills-img">
+                            </a>,
+                            <a href="img/skills/adv_css.jpg" class="steps__skills-link">
+                                CSS (SCSS)
+                                <img src="img/skills/adv_css.jpg" alt="" class="steps__skills-img">
+                            </a>
+                            , JS. If there is a need I can use bootstrap, quivery, 
+                            <a href="img/skills/figma_webflow.jpg" class="steps__skills-link">
+                                WEBFLOW
+                                <img src="img/skills/figma_webflow.jpg" alt="" class="steps__skills-img">
+                            </a>.
+                        </span>
+                    </div>
+
+                    <div class="steps__item fade-in">
+                        <span class="steps__number">#3</span>
+                        <h3 class="steps__title paragraph">Optimisation and testing</h3>
+                        <span class="steps__desc">I 
+                            <a href="img/skills/git_gulp.jpg" class="steps__skills-link">
+                                OPTIMIZE
+                                <img src="img/skills/git_gulp.jpg" alt="" class="steps__skills-img">
+                            </a> 
+                            code, pictures, fonts for faster loading. Also I test my work in all modern devices and browsers.</span>
+                    </div>
+
+                    <div class="steps__item fade-in">
+                        <span class="steps__number">#4</span>
+                        <h3 class="steps__title paragraph">Go live</h3>
+                        <span class="steps__desc">We choose and buy domain name, hosting for you. I put the website to a server and yeeeah. You can use it for your business.</span>
+                    </div>
+                    <span class="steps__information fade-in">
+                        * You can hover bold words, and see my certificate on this technology.
+                    </span>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact" class="section-contact section">
+            <p class="section-contact__title paragraph move-el-right">Want to know more about me ?</p>
+            <p class="section-contact__text paragraph move-el-left">
+                Check out my 
+                <a class="paragraph--blank" href="https://www.linkedin.com/in/katepeleshko/">Linkedin</a> and 
+                <a class="paragraph--blank" href="https://www.instagram.com/k.peleshko/?hl=ru">Instagram</a> or simply send me an 
+                <a class="paragraph--blank" href="https://mail.google.com/mail/u/0/?pli=1#inbox">email</a>.
+                I'm always looking for new and creative projects. 
+            </p>
+
+            <div class="social move-el-right">
+                <h4 class="social__title">conect.</h4>
+                <div class="social__wrapper">
+                    <a href="https://www.instagram.com/k.peleshko/?hl=ru">
+                        <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/katepeleshko">
+                        <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#icon-linkedin2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/kpeleshko">
+                        <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#icon-github"></use>
+                        </svg>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                        <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#icon-skype"></use>
+                        </svg>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/?pli=1#inbox">
+                        <svg class="social__icon">
+                            <use xlink:href="img/sprite.svg#icon-google2"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="changer move-el-left">
+                <h4 class="changer__title">color.</h4>
+                <div class="changer__wrapper">
+                    <div class="changer__color" data-color="colorGroup1">
+                        <span class="changer__color-main changer__color-main--1" ></span>
+                        <span class="changer__color-secondary changer__color-secondary--1"></span>
+                    </div>
+            
+                    <div class="changer__color" data-color="colorGroup2">
+                        <span class="changer__color-main changer__color-main--2"></span>
+                        <span class="changer__color-secondary changer__color-secondary--2"></span>
+                    </div>
+                    
+                    <div class="changer__color" data-color="colorGroup3">
+                        <span class="changer__color-main changer__color-main--3"></span>
+                        <span class="changer__color-secondary changer__color-secondary--3"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
