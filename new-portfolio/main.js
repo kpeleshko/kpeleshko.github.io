@@ -26,37 +26,18 @@ for(let i = 0; i<allBtn.length; i++) {
 }
 
 
-//PORTFOLIO GALLERY
-function changeImg(largeLink, mediumLink, smallLink) {
-	document.querySelector(".portfolio__img--large").src = largeLink;
-	document.querySelector(".portfolio__img--medium").src = mediumLink;
-	document.querySelector(".portfolio__img--small").src = smallLink;
-}
+// //PORTFOLIO GALLERY
+// function changeImg(largeLink, mediumLink, smallLink) {
+// 	document.querySelector(".portfolio__img--large").src = largeLink;
+// 	document.querySelector(".portfolio__img--medium").src = mediumLink;
+// 	document.querySelector(".portfolio__img--small").src = smallLink;
+// }
 
-function removeImg() {
-	document.querySelector(".portfolio__img--large").src = '';
-	document.querySelector(".portfolio__img--medium").src = '';
-	document.querySelector(".portfolio__img--small").src = '';
-}
-
-// const portfolioLinks = document.querySelectorAll('.portfolio__link');
-// let imgPortfolio = document.querySelectorAll('.portfolio__img-wrapper');
-// portfolioLinks.forEach(link => {
-// 	link.addEventListener("mouseover", ()=> {
-// 		link.classList.add('active');
-// 		imgPortfolio.forEach(img => {
-// 			img.classList.add('img-animation');
-// 		}) 
-// 	});
-
-// 	link.addEventListener("mouseout", ()=> {
-// 		link.classList.remove('active');
-// 		imgPortfolio.forEach(img => {
-// 			img.classList.remove('img-animation');
-// 		}) 
-// 	});
-// })
-
+// function removeImg() {
+// 	document.querySelector(".portfolio__img--large").src = '';
+// 	document.querySelector(".portfolio__img--medium").src = '';
+// 	document.querySelector(".portfolio__img--small").src = '';
+// }
 
 // MOVE NAV
 const nav = document.querySelector('.nav');
@@ -195,3 +176,25 @@ titlesLeft.forEach(title => {
 	}
 })
 }, false);
+
+
+// Active link switching
+$(document).ready(function() {
+  
+	var scrollLink = $('.scroll');
+	$(window).scroll(function() {
+	  var scrollbarLocation = $(this).scrollTop();
+	  
+	  scrollLink.each(function() {
+		
+		var sectionOffset = $(this.hash).offset().top - 20;
+		
+		if ( sectionOffset <= scrollbarLocation ) {
+		  $(this).addClass('link--active');
+		  $(this).siblings().removeClass('link--active');
+		}
+	  })
+	  
+	})
+	
+  })
