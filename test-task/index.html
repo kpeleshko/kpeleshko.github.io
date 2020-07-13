@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Test Task</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__wrapper">
+                <a class="header__logo-link" href="index.html">
+                    <svg class="header__logo" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60"
+                        style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                        <linearGradient id="linear-gradient">
+                            <stop offset="0%" stop-color="#07d9b4" />
+                            <stop offset="100%" stop-color="#22b6e2" />
+                        </linearGradient>
+                        <path fill="url(#linear-gradient)" d="M50.9,30.6c-0.1,0.7-0.5,1.3-1.2,1.6L12.9,53.4c-1.7,1-3.8-0.2-3.8-2.2V34H14c0.3,0,0.6-0.2,0.6-0.5l2.9-8.5
+                                 c0.2-0.6,1-0.6,1.3-0.1L25,37.3c0.1,0.3,0.6,0.3,0.6-0.1l3.9-12.1c0.2-0.4,0.8-0.6,1.2-0.3l7.3,5.9c0.1,0.1,0.1,0.1,0.2,0.1
+                                 L50.9,30.6z M13.9,31.9l3.8-9.5c0.2-0.6,1-0.6,1.3-0.1L24.6,33c0.3,0.6,1.1,0.5,1.3-0.1l3.4-9.5c0.1-0.4,0.8-0.6,1.1-0.3l7.8,6.3
+                                 c0.1,0.1,0.1,0.1,0.2,0.1l12.3-0.2c-0.2-0.6-0.5-1.1-1.1-1.5L12.9,6.6c-1.6-1-3.8,0.2-3.8,2.2v23.6h4.1
+                                 C13.5,32.3,13.7,32.2,13.9,31.9z" />
+                    </svg>
+                </a>
+                <button class="header__controller controller">
+                    <svg class="controller__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+                    </svg>
+                    <span class="controller__text">12</span>
+                </button>
+                <button class="header__controller controller">
+                    <svg class="controller__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+                    </svg>
+                    <span class="controller__text">126</span>
+                </button>
+                <img src="img/photo/arseenko_r.jpg" class="header__user" alt="User photo.">
+                <button class="header__burger-menu">
+                    <img src="img/icons/apps.svg" class="header__burger-menu-icon" alt="Menu icon">
+                </button>
+            </div>
+
+            <form class="header__search search">
+                <input class="search__input" type="search" placeholder="Шукати фахівця, клініку, послугу...">
+                <button class="search__btn">
+                    <svg class="search__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                        <path d="M0 0h24v24H0z" fill="none" /></svg>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <section class="about-us container">
+        <div class="about-us__preview">
+            <img class="about-us__logo" src="img/photo/logo-blagomed.png" alt="Logo">
+            <picture>
+                <img class="about-us__img" src="img/photo/prev-building.jpg" alt="Preview building">
+            </picture>
+            <h1 class="about-us__title"><a class="about-us__title-link" href="index.html">
+                    Медичний, оздоровчий центр «Благомед»<br>
+                    <span class="about-us__subtitle">Медичний центр</span>
+                </a>
+            </h1>
+            <button class="about-us__arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                </svg>
+            </button>
+        </div>
+        <div class="about-us__desc-wrapper">
+            <div class="about-us__desc">
+                <span class="about-us__text">5,0</span>
+                <svg class="about-us__icon about-us__icon--star" width="18" height="18" viewBox="0 0 18 18">
+                    <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+                    <path fill="none" d="M0 0h18v18H0z" />
+                </svg>
+                <span class="about-us__text">(953 Відгуків)</span>
+            </div>
+
+            <div class="about-us__desc">
+                <svg class="about-us__icon" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                    <path
+                        d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z" />
+                </svg>
+                <span class="about-us__text">120 Лікарів</span>
+            </div>
+
+            <div class="about-us__desc">
+                <svg class="about-us__icon" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                </svg>
+                <span class="about-us__text">340 Послуг</span>
+            </div>
+
+            <div class="about-us__desc">
+                <svg class="about-us__icon" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                    <path
+                        d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
+                </svg>
+                <span class="about-us__text">30 Філіалів</span>
+            </div>
+        </div>
+
+        <div class="about-us__navigation">
+            <button class="btn about-us__navigation-item">Я тут працюю</button>
+            <button class="btn about-us__navigation-item">Про клініку</button>
+            <button id="btn-show-photo" class="btn about-us__navigation-item">Фото</button>
+            <button class="btn about-us__navigation-item">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                        d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="about-us__gallery">
+            <img class="about-us__gallery-img" src="img/photo-gallery/photo-gallery-1.jpg" alt="">
+            <img class="about-us__gallery-img" src="img/photo-gallery/photo-gallery-2.jpg" alt="">
+            <img class="about-us__gallery-img" src="img/photo-gallery/photo-gallery.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="doctors-section container">
+        <div class="doctors-section__header">
+            <h2 class="doctors-section__title">Лікарі закладу</h2>
+            <a href="#" class="doctors-section__link">Всі лікарі</a>
+        </div>
+
+        <div class="doctors-section__slider-cards card card--online">
+            <div class="card__slider-card">
+                <div class="card__favorite">
+                    <svg class="card__favorite-icon" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                    </svg>
+                </div>
+
+                <div class="card__header card-header">
+                    <div class="card-header__title-wrapper">
+                        <h3 class="card-header__title">Іванов Олексій Вікторович</h3>
+                        <p class="card-header__subtitle">Інфекціонист, Лікар-нарколог дільничий, Ще якась спеціальність
+                            цього лікаря</p>
+                    </div>
+                    <figure class="card-header__avatar card-avatar">
+                        <img class="card-avatar__photo" src="img/photo/doctor-avatar.png" alt="Doctor avatar">
+                        <figcaption class="card-avatar__description">
+                            <span class="card-avatar__description--online">Доступний</span>
+                            <span class="card-avatar__description--offline">Недоступний</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="card__about card-about">
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">4,9</span>
+                        <span class="card-about__item-name">Рейтинг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+                                <path fill="none" d="M0 0h18v18H0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">123</span>
+                        <span class="card-about__item-name">Відгуків</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">14</span>
+                        <span class="card-about__item-name">Послуг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <address class="card-about__item-address">м. Луцьк, пр. Соборності 89, каб. 412</address>
+                        <span class="card-about__item-name">Луцька міська клінічна лікарня</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="card__price card-price">
+                    <caption class="card-price__title">Послуги та ціни:</caption>
+                    <tr>
+                        <td class="card-price__name">Консультація</td>
+                        <td class="card-price__value">- від 100 грн</td>
+                    </tr>
+                    <tr>
+                        <td class="card-price__name">Сеанс терапії</td>
+                        <td class="card-price__value">- від 300 грн</td>
+                    </tr>
+                </table>
+
+                <div class="card__btns-wrapper">
+                    <button class="card__btn btn">Написати</button>
+                    <button class="card__btn btn">Сторінка лікаря</button>
+                </div>
+            </div>
+
+            <div class="card__slider-card">
+                <div class="card__favorite">
+                    <svg class="card__favorite-icon" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                    </svg>
+                </div>
+
+                <div class="card__header card-header">
+                    <div class="card-header__title-wrapper">
+                        <h3 class="card-header__title">Іванов Олексій Вікторович</h3>
+                        <p class="card-header__subtitle">Інфекціонист, Лікар-нарколог дільничий, Ще якась спеціальність
+                            цього лікаря</p>
+                    </div>
+                    <figure class="card-header__avatar card-avatar">
+                        <img class="card-avatar__photo" src="img/photo/doctor-avatar.png" alt="Doctor avatar">
+                        <figcaption class="card-avatar__description">
+                            <span class="card-avatar__description--online">Доступний</span>
+                            <span class="card-avatar__description--offline">Недоступний</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="card__about card-about">
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">4,9</span>
+                        <span class="card-about__item-name">Рейтинг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+                                <path fill="none" d="M0 0h18v18H0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">123</span>
+                        <span class="card-about__item-name">Відгуків</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">14</span>
+                        <span class="card-about__item-name">Послуг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <address class="card-about__item-address">м. Луцьк, пр. Соборності 89, каб. 412</address>
+                        <span class="card-about__item-name">Луцька міська клінічна лікарня</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="card__price card-price">
+                    <caption class="card-price__title">Послуги та ціни:</caption>
+                    <tr>
+                        <td class="card-price__name">Консультація</td>
+                        <td class="card-price__value">- від 100 грн</td>
+                    </tr>
+                    <tr>
+                        <td class="card-price__name">Сеанс терапії</td>
+                        <td class="card-price__value">- від 300 грн</td>
+                    </tr>
+                </table>
+
+                <div class="card__btns-wrapper">
+                    <button class="card__btn btn">Написати</button>
+                    <button class="card__btn btn">Сторінка лікаря</button>
+                </div>
+            </div>
+
+            <div class="card__slider-card">
+                <div class="card__favorite">
+                    <svg class="card__favorite-icon" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                    </svg>
+                </div>
+
+                <div class="card__header card-header">
+                    <div class="card-header__title-wrapper">
+                        <h3 class="card-header__title">Іванов Олексій Вікторович</h3>
+                        <p class="card-header__subtitle">Інфекціонист, Лікар-нарколог дільничий, Ще якась спеціальність
+                            цього лікаря</p>
+                    </div>
+                    <figure class="card-header__avatar card-avatar">
+                        <img class="card-avatar__photo" src="img/photo/doctor-avatar.png" alt="Doctor avatar">
+                        <figcaption class="card-avatar__description">
+                            <span class="card-avatar__description--online">Доступний</span>
+                            <span class="card-avatar__description--offline">Недоступний</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="card__about card-about">
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">4,9</span>
+                        <span class="card-about__item-name">Рейтинг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+                                <path fill="none" d="M0 0h18v18H0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">123</span>
+                        <span class="card-about__item-name">Відгуків</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">14</span>
+                        <span class="card-about__item-name">Послуг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <address class="card-about__item-address">м. Луцьк, пр. Соборності 89, каб. 412</address>
+                        <span class="card-about__item-name">Луцька міська клінічна лікарня</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="card__price card-price">
+                    <caption class="card-price__title">Послуги та ціни:</caption>
+                    <tr>
+                        <td class="card-price__name">Консультація</td>
+                        <td class="card-price__value">- від 100 грн</td>
+                    </tr>
+                    <tr>
+                        <td class="card-price__name">Сеанс терапії</td>
+                        <td class="card-price__value">- від 300 грн</td>
+                    </tr>
+                </table>
+
+                <div class="card__btns-wrapper">
+                    <button class="card__btn btn">Написати</button>
+                    <button class="card__btn btn">Сторінка лікаря</button>
+                </div>
+            </div>
+
+            <div class="card__slider-card">
+                <div class="card__favorite">
+                    <svg class="card__favorite-icon" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" />
+                    </svg>
+                </div>
+
+                <div class="card__header card-header">
+                    <div class="card-header__title-wrapper">
+                        <h3 class="card-header__title">Іванов Олексій Вікторович</h3>
+                        <p class="card-header__subtitle">Інфекціонист, Лікар-нарколог дільничий, Ще якась спеціальність
+                            цього лікаря</p>
+                    </div>
+                    <figure class="card-header__avatar card-avatar">
+                        <img class="card-avatar__photo" src="img/photo/doctor-avatar.png" alt="Doctor avatar">
+                        <figcaption class="card-avatar__description">
+                            <span class="card-avatar__description--online">Доступний</span>
+                            <span class="card-avatar__description--offline">Недоступний</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="card__about card-about">
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">4,9</span>
+                        <span class="card-about__item-name">Рейтинг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z" />
+                                <path fill="none" d="M0 0h18v18H0z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">123</span>
+                        <span class="card-about__item-name">Відгуків</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <span class="card-about__item-value">14</span>
+                        <span class="card-about__item-name">Послуг</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V10h16v11zm0-13H4V5h16v3z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="card-about__item">
+                        <address class="card-about__item-address">м. Луцьк, пр. Соборності 89, каб. 412</address>
+                        <span class="card-about__item-name">Луцька міська клінічна лікарня</span>
+                        <div class="card-about__item-icon-wrapper">
+                            <svg class="card-about__item-icon" width="18" height="18" viewBox="0 0 24 24">
+                                <path fill="none" d="M0 0h24v24H0V0z" />
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="card__price card-price">
+                    <caption class="card-price__title">Послуги та ціни:</caption>
+                    <tr>
+                        <td class="card-price__name">Консультація</td>
+                        <td class="card-price__value">- від 100 грн</td>
+                    </tr>
+                    <tr>
+                        <td class="card-price__name">Сеанс терапії</td>
+                        <td class="card-price__value">- від 300 грн</td>
+                    </tr>
+                </table>
+
+                <div class="card__btns-wrapper">
+                    <button class="card__btn btn">Написати</button>
+                    <button class="card__btn btn">Сторінка лікаря</button>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <div class="footer__info">
+                <div class="footer__navigation">
+                    <h4 class="footer__navigation-title footer__titles">Компанія</h4>
+                    <a class="footer__navigation-links link--underline" href="#">Про сервіс</a>
+                    <a class="footer__navigation-links link--underline" href="#">Новини</a>
+                    <a class="footer__navigation-links link--underline" href="#">Довідковий центр</a>
+                    <a class="footer__navigation-links link--underline" href="#">Зворотній зв’язок</a>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__contact-title footer__titles">Контакти</h4>
+                    <a class="footer__contact-links" href="#">moniheal@gmail.com</a>
+                    <div class="footer__contact-social social">
+                        <div class="social__icon-wrapper">
+                            <svg class="social__icon" viewBox="0 0 24 24">
+                                <path d="M16,6h1V2H15a4.72,4.72,0,0,0-5,5V9H7v4h3v9h4V13h2l1-4H14V8C14,7,14,6,16,6Z" />
+                            </svg>
+                        </div>
+                        <div class="social__icon-wrapper">
+                            <svg class="social__icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M12,4.62c2.4,0,2.69,0,3.64.05A5,5,0,0,1,17.31,5,3,3,0,0,1,19,6.69a5,5,0,0,1,.31,1.67c0,.95.05,1.23.05,3.64s0,2.69-.05,3.64A5,5,0,0,1,19,17.31,3,3,0,0,1,17.31,19a5,5,0,0,1-1.67.31c-.95,0-1.23.05-3.64.05s-2.69,0-3.64-.05A5,5,0,0,1,6.69,19,3,3,0,0,1,5,17.31a5,5,0,0,1-.31-1.67c0-.95-.05-1.23-.05-3.64s0-2.69.05-3.64A5,5,0,0,1,5,6.69,3,3,0,0,1,6.69,5a5,5,0,0,1,1.67-.31c.95,0,1.23-.05,3.64-.05M12,3c-2.44,0-2.75,0-3.71.05a6.61,6.61,0,0,0-2.18.42A4.6,4.6,0,0,0,3.47,6.1a6.61,6.61,0,0,0-.42,2.18C3,9.25,3,9.56,3,12s0,2.75.05,3.71a6.61,6.61,0,0,0,.42,2.18A4.6,4.6,0,0,0,6.1,20.53a6.61,6.61,0,0,0,2.18.42c1,0,1.27.05,3.71.05s2.75,0,3.71-.05a6.61,6.61,0,0,0,2.18-.42,4.6,4.6,0,0,0,2.63-2.63,6.61,6.61,0,0,0,.42-2.18c0-1,.05-1.27.05-3.71s0-2.75-.05-3.71a6.61,6.61,0,0,0-.42-2.18A4.6,4.6,0,0,0,17.9,3.47a6.61,6.61,0,0,0-2.18-.42C14.75,3,14.44,3,12,3Z" />
+                                <path
+                                    d="M12,7.38A4.62,4.62,0,1,0,16.62,12,4.62,4.62,0,0,0,12,7.38ZM12,15a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z" />
+                                <circle cx="16.8" cy="7.2" r="1.08" />
+                            </svg>
+                        </div>
+                        <div class="social__icon-wrapper">
+                            <svg class="social__icon" viewBox="1 -35 511.99993 511">
+                                <path
+                                    d="m121.453125 253.171875 63.554687 158.886719 82.75-82.753906 141.535157 112.503906 102.707031-441.308594-512 205.480469zm-39.933594-47.640625 244.046875-97.945312-194.074218 117.363281zm287.535157-89.25-161.980469 148.1875-19.484375 73.425781-36.035156-90.085937zm-149.851563 219.230469 9.816406-36.996094 15.144531 12.035156zm171.65625 53.394531-147.386719-117.152344 221.902344-203.007812zm0 0" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__subscribe">
+                <h4 class="footer__subscribe-title footer__titles">Підписатися на розсилку</h4>
+                <form class="footer__subscribe-form subscribe-form">
+                    <input class="subscribe-form__input" type="text" placeholder="Введіть вашу пошту">
+                    <button class="subscribe-form__btn">
+                        <svg class="subscribe-form__icon" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="footer__language">
+                <select class="footer__language-options">
+                    <option value="uk">Українська</option>
+                    <option value="rus">Русский</option>
+                    <option value="eng">English</option>
+                </select>
+                <svg class="footer__language-changer" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                </svg>
+            </div>
+
+            <div class="footer__copyright">
+                <svg class="footer__copyright-logo" x="0px" y="0px" viewBox="0 0 60 60"
+                    style="enable-background:new 0 0 60 60;">
+                    <path class="st0" d="M50.9,30.6c-0.1,0.7-0.5,1.3-1.2,1.6L12.9,53.4c-1.7,1-3.8-0.2-3.8-2.2V34H14c0.3,0,0.6-0.2,0.6-0.5l2.9-8.5
+                    c0.2-0.6,1-0.6,1.3-0.1L25,37.3c0.1,0.3,0.6,0.3,0.6-0.1l3.9-12.1c0.2-0.4,0.8-0.6,1.2-0.3l7.3,5.9c0.1,0.1,0.1,0.1,0.2,0.1
+                    L50.9,30.6z M13.9,31.9l3.8-9.5c0.2-0.6,1-0.6,1.3-0.1L24.6,33c0.3,0.6,1.1,0.5,1.3-0.1l3.4-9.5c0.1-0.4,0.8-0.6,1.1-0.3l7.8,6.3
+                    c0.1,0.1,0.1,0.1,0.2,0.1l12.3-0.2c-0.2-0.6-0.5-1.1-1.1-1.5L12.9,6.6c-1.6-1-3.8,0.2-3.8,2.2v23.6h4.1
+                    C13.5,32.3,13.7,32.2,13.9,31.9z" />
+                </svg>
+                <p class="footer__copyright-text">2019
+                    <span class="footer__copyright-text--bold">MoniHeal.</span>
+                    Medical Online Information System</p>
+            </div>
+            <div class="footer__rules">
+                <a class="footer__rules-link" href="#">Захист даних</a>
+                <a class="footer__rules-link" href="#">Політика приватності</a>
+                <a class="footer__rules-link" href="#">Правила користування</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+
+        document.querySelector('#btn-show-photo').addEventListener('click', () => {
+            document.querySelector('.about-us__gallery').classList.toggle('about-us__gallery--visible');
+            document.querySelector('#btn-show-photo').classList.toggle('btn--active');
+        })
+
+        const $doctor_card_slider = $('.doctors-section__slider-cards');
+        const doctor_card_slider_settings = {
+            focusOnSelect: true,
+            dots: true,
+            dotsClass: 'slick-dots slider__dots',
+            centerMode: true,
+            arrows: false,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 99999,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        };
+
+        // Init Slider
+        $doctor_card_slider.slick(doctor_card_slider_settings);
+
+        // Reslick only if it's not slick
+        $(window).on('resize', function () {
+            if (!$doctor_card_slider.hasClass('slick-initialized')) {
+                return $doctor_card_slider.slick(doctor_card_slider_settings);
+            }
+        });
+    </script>
+</body>
+
+</html>
