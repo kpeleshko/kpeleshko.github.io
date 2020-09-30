@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/11d164da9b46e6f7955e396757e5ca70?family=Avenir+Next+Cyr" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>MonieHeal</title>
+    <script>
+
+    </script>
+    
+</head>
+<body>
+    <div id="background"></div>
+    <div class="conteiner">
+        
+        <header>
+            <div class="header-box">
+                <div class="header-box_logotype">
+                    <img src="./img/Logo_color 1.png" alt="logo">
+                </div>
+                <div class="header-box_search">
+                    <form id="form-search">
+                        <input class="button-input" id="input-search" type="text" placeholder="Пошук фахівця">
+                        <button class="button-input" id="button-search"type="submit">Знайти</button>
+                    </form>
+                </div>
+                <div class="header-box_menu">
+                    <div class="header-menu" id="menu-languge">
+                        <form>
+                            <select id="form-language">
+                                <option lang="Укр" value="ukrainian">Укр</option>
+                                <option lang="Рос" value="russian">Рос</option>
+                                <option lang="Анг" value="english">Анг</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="header-menu" id="menu-login">
+                        <button id="button-login">
+                            <img src="./img/Vector.png" alt="vector">Увійти</button>
+                    </div>
+                    <div class="header-menu" id="menu-burger" onclick="Menu()">
+                        <span id="menu__toggle" type="checkbox">Меню</span>
+                        <img src="./img/menu.png" alt="menu">  
+                    </div>
+                </div>
+            </div>
+        </header>
+        <hr id="header-hr">
+        <section>
+            <div id="main-menu">
+                <span style="text-decoration-line: underline;color: #16395B;" class="tab">Головна</span>
+                <img src="./img/Vector (3).png" alt="arrow">
+                <span id="color: #16395B;" class="tab">Клініки</span>
+                <img src="./img/Vector (3).png" alt="arrow">
+                <span style="color: #A7C0E2;" class="tab">Smart Medical Center</span>
+            </div>
+            <div id="main-picture">
+                <div id="main-picture_left">
+                    <div  class="picture-left-text" id="picture-left-text_img">
+                        <img src="./img/parents.png" alt="parents">
+                    </div>
+                    <div class="picture-left-text" id="picture-left-text_main-title">
+                        <span id="main-title-parents">Parents-Україна</span>
+                        <div id="main-title-mark"><img src="./img//star.png" alt="star"><span>4,8</span></div>
+                    </div>
+                    <div class="picture-left-text"><span id="main-subtitle">Центр репродуктології</span></div>
+                    <div class="picture-left-text" id="picture-left-text_location">
+                        <img style="height: 20px; margin-right:18px ;" src="./img/location.png" alt="location">
+                        <span class="picture-left-possition">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                    </div>
+                    <div class="picture-left-text" id="picture-left-text_phone">
+                        <img style="margin-right:17px ; width: 18px; height: 18px;" src="./img/phone.png" alt="phone">
+                        <span  class="picture-left-possition">+38 (050) 137 - 60 - 41</span>
+                        <img style="margin-left: 6px; width: 13.33px; height: 13.33px;"onclick="Contact()" src="./img/tick.png" alt="tick">
+                    </div>
+                    <div class="picture-left-text"  id="picture-left-text_site">
+                        <img style="margin-right: 16px;" src="./img/world.png" alt="world">
+                        <span class="picture-left-possition">smartmedicalcenter.ua</span>
+                    </div>
+                    <div class="picture-left-text" >
+                        <button id="picture-left-text_button">Передзвоніть мені</button>
+                    </div>
+                </div>
+                <div id="main-picture_right">
+                    <div class="picture-right" id="picture-right_top">
+                        <div class="picture-right_text">
+                            <img src="./img/picture.png" alt="picture">
+                            <span onclick="showFoto()">Переглянути 12 фото</span>
+                        </div>
+                    </div>
+                    <div class="picture-right" id="picture-right_bottom">
+                        <div class="picture-right_text">
+                            <img id="map-picture" src="./img/map-small.png" alt="picture">
+                            <span onclick="showMap()">Клініка на мапі</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu_about-time">
+                <div id="menu_about">
+                    <p style="font-weight: 450;font-size: 24px;line-height: 29px; margin-bottom: 35px;">Про клініку</p>
+                    <p>Основна спеціалізація клініки Flexis це лікування і реабілітація пацієнтів з ревматологічними, неврологічними і травматологічними ушкодженнями опорно-рухового апарату.</p>
+                    <p style="margin: 15px 0;">Ми створили велику і ультрасучасну апаратну базу, яка дозволяє проводити комп'ютерне витягування, імпульсно- хвильову терапію, застосовувати для лікування лазерні технології лікування, миостимуляцию, магніторезонансну терапію, внутрішньосуглобові ін'єкції, алопатичну терапію.</p>
+                    <p>Сучасні технології в комплексі з апаратурою і лікарським професіоналізмом дозволяють повернути людині колишню активність і інтерес до діяльності в тих життєвих сферах, які здавалися вже безповоротно втраченими.</p>
+                    <button class="menu_about-button">Читати повністю</button>
+                </div>
+                <div id="menu_time">
+                    <p style="font-weight: 450;font-size: 24px;line-height: 29px;">Графік роботи</p>
+                    <div class="text-time">
+                        <span>Понеділок:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Вівторок:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Середа:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Четвер:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Пятниця:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Субота:</span>
+                        <span style="color: black;">8:30-19:00</span>
+                    </div>
+                    <hr/>
+                    <div class="text-time">
+                        <span>Неділя:</span>
+                        <span style="color: black;">Вихідний</span>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+            <div id="menu-specialty">
+                <div class="menu-specialty-title" style="margin: 0px 0px;">
+                    <span>Спеціальності (43)</span>
+                    <button id="menu-specialty-title_button">Показати всі</button>
+                </div>
+                <div id="list-specialty">
+                    <div class="specialty">
+                        <span>Акушер-гінеколог (16)</span>
+                        <span>Алерголог (7)</span>
+                        <span>Алерголог дитячий (1)</span>
+                    </div>
+                    <div class="specialty">
+                        <span>Генетик (12)</span>
+                        <span>Гематолог (1)</span>
+                        <span>Гінеколог-онколог (3)</span>
+                    </div>
+                    <div class="specialty">
+                        <span>Вірусолог (3)</span>
+                        <span>Токсиколог (11)</span>
+                        <span>Хірург-Онколог (2)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-services">
+                <div class="menu-specialty-title">
+                    <span>Послуги (28)</span>
+                    <button id="menu-specialty-title_button">Показати всі</button>
+                </div>
+                <div class="block-services-doktor">
+                    <button class="arrow-left">
+                        <img src="./img/arrow.png" alt="arrow">
+                    </button>
+                    <div class="box-doctors">
+                    <div class="box-services-doktor">
+                        <span class="block-services-doktor_title">Проведение одночасового сеанса психотерапии.</span>
+                        <span class="block-services-doktor_subtitle">Сеанс психотерапии</span>
+                        <div class="block-services-doktor_time-price">
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"><img style="width:16.67px; height: 16.67px;margin: 7.67px;" src="./img/clock1.png" alt="clock"></div>
+                                <span style="margin-left: 8px;">1 год 10хв</span>
+                            </div>
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"> <img style="width:16.67px; height: 16.67px; margin: 7.67px;" src="./img/card.png" alt="card"></div>
+                                <span style="margin-left: 8px;">1 200 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-services-doktor">
+                        <span class="block-services-doktor_title">Проведение краткой консультации, осмотр пациента.</span>
+                        <span class="block-services-doktor_subtitle">Консультация</span>
+                        <div class="block-services-doktor_time-price">
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"><img style="width:16.67px; height: 16.67px;margin: 7.67px;" src="./img/clock1.png" alt="clock"></div>
+                                <span style="margin-left: 8px;">1 год 10хв</span>
+                            </div>
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"> <img style="width:16.67px; height: 16.67px; margin: 7.67px;" src="./img/card.png" alt="card"></div>
+                                <span style="margin-left: 8px;">1 200 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-services-doktor">
+                        <span class="block-services-doktor_title">Проведение лазерной корекции одного или двух глаз</span>
+                        <span class="block-services-doktor_subtitle">Лазерная коррекция глаз</span>
+                        <div class="block-services-doktor_time-price">
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"><img style="width:16.67px; height: 16.67px;margin: 7.67px;" src="./img/clock1.png" alt="clock"></div>
+                                <span style="margin-left: 8px;">1 год 10хв</span>
+                            </div>
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"> <img style="width:16.67px; height: 16.67px; margin: 7.67px;" src="./img/card.png" alt="card"></div>
+                                <span style="margin-left: 8px;">1 200 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-services-doktor">
+                        <span class="block-services-doktor_title">Проведение краткой консультации, осмотр пациента.</span>
+                        <span class="block-services-doktor_subtitle">Консультация</span>
+                        <div class="block-services-doktor_time-price">
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"><img style="width:16.67px; height: 16.67px;margin: 7.67px;" src="./img/clock1.png" alt="clock"></div>
+                                <span style="margin-left: 8px;">1 год 10хв</span>
+                            </div>
+                            <div class="block-services-doktor_img-text">
+                                <div  class="block-services-doktor_img"> <img style="width:16.67px; height: 16.67px; margin: 7.67px;" src="./img/card.png" alt="card"></div>
+                                <span style="margin-left: 8px;">1 200 грн</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <button class="arrow-right">
+                        <img src="./img/arrowright.png" alt="arrow">
+                    </button>
+                </div>
+                
+            </div>
+            <div class="menu-services">
+                <div class="menu-specialty-title" >
+                    <span>Лікарі (28)</span>
+                    <button id="menu-specialty-title_button">Показати всі</button>
+                </div>
+                <div class="block-services-doktor">
+                    <button class="arrow-left">
+                        <img src="./img/arrow.png" alt="arrow">
+                    </button>
+                    <div class="box-doctors">
+                    <div class="box-doktor">
+                        <div class="block-doktor-name">
+                            <div style="margin-right:16px; height: 110px;">
+                                <img src="./img/man.png" alt="man">
+                                <div class="block-online"></div>
+                                <span class="block-online-text">Онлайн</span>
+                            </div>
+                            <div>
+                                <span class="block-services-doktor_title" style=" width: 174px; margin: 0;">Бойко Олександр Володимирович</span>
+                                <span class="block-services-doktor_subtitle" style="color: #16395B; width: 174px;margin: 0;">Інфекціоніст, Лікар-ортопед, Травматолог дитячий</span>
+                            </div>
+                        </div>
+                        <div class="block-doktor-about">
+                            <div class="block-information">
+                                <span class="block-information_title">Рейтинг</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/starblue.png" alt="star">
+                                    <span class="block-information_text">4,6</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Відкуків</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/response.png" alt="response">
+                                    <span class="block-information_text">12</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Досвід (років)</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" style="width: 13.33px; height: 13.33px;"  src="./img/clockblue.png" alt="clock">
+                                    <span class="block-information_text"></span>10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-doktor-address">
+                            <span class="block-information_title" style="margin-bottom: 3px;">Адреса</span>
+                            <span class="block-doktor-text">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                            <div class="block-doktor-information">
+                                <span class="block-information_title" style="margin-top: 12px;">Послуги та ціни</span>
+                                <span class="block-doktor-text">Консультация- <b>610 грн</b></span>
+                                <span class="block-doktor-text">первинна консультація- <b>150 грн</b></span>
+                                <span class="block-doktor-text">Консультація гінеколога- <b>Безкоштовно</b></span>
+                                <span class="block-doktor-text">Комплексне обстеження стану здоров'я- <b> 100 грн</b></span>
+                                <button class="block-doktor-address_button">Записатись</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-doktor">
+                        <div class="block-doktor-name">
+                            <div style="margin-right:16px; height: 110px;">
+                                <img src="./img/man.png" alt="man">
+                                <div class="block-online" style="background: #A7C0E2;"></div>
+                                <span class="block-online-text" style="color: #A7C0E2;">19 годин тому</span>
+                            </div>
+                            <div>
+                                <span class="block-services-doktor_title" style=" width: 174px; margin: 0;">Бойко Олександр Володимирович</span>
+                                <span class="block-services-doktor_subtitle" style="color: #16395B; width: 174px;margin: 0;">Інфекціоніст, Лікар-ортопед, Травматолог дитячий</span>
+                            </div>
+                        </div>
+                        <div class="block-doktor-about">
+                            <div class="block-information">
+                                <span class="block-information_title">Рейтинг</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/starblue.png" alt="star">
+                                    <span class="block-information_text">4,6</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Відкуків</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/response.png" alt="response">
+                                    <span class="block-information_text">12</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Досвід (років)</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" style="width: 13.33px; height: 13.33px;"  src="./img/clockblue.png" alt="clock">
+                                    <span class="block-information_text"></span>10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-doktor-address">
+                            <span class="block-information_title" style="margin-bottom: 3px;">Адреса</span>
+                            <span class="block-doktor-text">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                            <div class="block-doktor-information">
+                                <span class="block-information_title" style="margin-top: 12px;">Послуги та ціни</span>
+                                <span class="block-doktor-text">Консультация- <b>610 грн</b></span>
+                                <span class="block-doktor-text">первинна консультація- <b>150 грн</b></span>
+                                <span class="block-doktor-text">Консультація гінеколога- <b>Безкоштовно</b></span>
+                                <span class="block-doktor-text">Комплексне обстеження стану здоров'я- <b> 100 грн</b></span>
+                                <button class="block-doktor-address_button">Записатись</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-doktor">
+                        <div class="block-doktor-name">
+                            <div style="margin-right:16px; height: 110px;">
+                                <img src="./img/man.png" alt="man">
+                                <div class="block-online"></div>
+                                <span class="block-online-text" style="color: #A7C0E2;">19 годин тому</span>
+                            </div>
+                            <div>
+                                <span class="block-services-doktor_title" style=" width: 174px; margin: 0;">Бойко Олександр Володимирович</span>
+                                <span class="block-services-doktor_subtitle" style="color: #16395B; width: 174px;margin: 0;">Інфекціоніст, Лікар-ортопед, Травматолог дитячий</span>
+                            </div>
+                        </div>
+                        <div class="block-doktor-about">
+                            <div class="block-information">
+                                <span class="block-information_title">Рейтинг</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/starblue.png" alt="star">
+                                    <span class="block-information_text">4,6</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Відкуків</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/response.png" alt="response">
+                                    <span class="block-information_text">12</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Досвід (років)</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" style="width: 13.33px; height: 13.33px;"  src="./img/clockblue.png" alt="clock">
+                                    <span class="block-information_text"></span>10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-doktor-address">
+                            <span class="block-information_title" style="margin-bottom: 3px;">Адреса</span>
+                            <span class="block-doktor-text">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                            <div class="block-doktor-information">
+                                <span class="block-information_title" style="margin-top: 12px;">Послуги та ціни</span>
+                                <span class="block-doktor-text">Консультация- <b>610 грн</b></span>
+                                <span class="block-doktor-text">первинна консультація- <b>150 грн</b></span>
+                                <span class="block-doktor-text">Консультація гінеколога- <b>Безкоштовно</b></span>
+                                <span class="block-doktor-text">Комплексне обстеження стану здоров'я- <b> 100 грн</b></span>
+                                <button class="block-doktor-address_button">Записатись</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-doktor">
+                        <div class="block-doktor-name">
+                            <div style="margin-right:16px; height: 110px;">
+                                <img src="./img/man.png" alt="man">
+                                <div class="block-online"></div>
+                                <span class="block-online-text" style="color: #A7C0E2;">19 годин тому</span>
+                            </div>
+                            <div>
+                                <span class="block-services-doktor_title" style=" width: 174px; margin: 0;">Бойко Олександр Володимирович</span>
+                                <span class="block-services-doktor_subtitle" style="color: #16395B; width: 174px;margin: 0;">Інфекціоніст, Лікар-ортопед, Травматолог дитячий</span>
+                            </div>
+                        </div>
+                        <div class="block-doktor-about">
+                            <div class="block-information">
+                                <span class="block-information_title">Рейтинг</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/starblue.png" alt="star">
+                                    <span class="block-information_text">4,6</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Відкуків</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" src="./img/response.png" alt="response">
+                                    <span class="block-information_text">12</span>
+                                </div>
+                            </div>
+                            <div class="block-information">
+                                <span class="block-information_title">Досвід (років)</span>
+                                <div class="block-information_img-text">
+                                    <img class="block-information_img" style="width: 13.33px; height: 13.33px;"  src="./img/clockblue.png" alt="clock">
+                                    <span class="block-information_text"></span>10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-doktor-address">
+                            <span class="block-information_title" style="margin-bottom: 3px;">Адреса</span>
+                            <span class="block-doktor-text">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                            <div class="block-doktor-information">
+                                <span class="block-information_title" style="margin-top: 12px;">Послуги та ціни</span>
+                                <span class="block-doktor-text">Консультация- <b>610 грн</b></span>
+                                <span class="block-doktor-text">первинна консультація- <b>150 грн</b></span>
+                                <span class="block-doktor-text">Консультація гінеколога- <b>Безкоштовно</b></span>
+                                <span class="block-doktor-text">Комплексне обстеження стану здоров'я- <b> 100 грн</b></span>
+                                <button class="block-doktor-address_button">Записатись</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <button class="arrow-right">
+                        <img src="./img/arrowright.png" alt="arrow">
+                    </button>
+                </div> 
+            </div>
+                <div class="block-response">
+                    <div class="menu-specialty-title-news">
+                        <span>Відгуки (14)</span>
+                    </div>
+                    <div class="response">
+                        <div class="box-response">
+                            <div class="box-response-person">
+                                <div class="box-response-person-img">
+                                    <img style="width: 100px; height: 100px;"src="./img/man.png" alt="man">
+                                </div>
+                                <div class="box-response-person-text">
+                                    <span class="box-response-person-name">Бойко Олександр Володимирович</span>
+                                    <span class="box-response-person-subtitle">Позитивний</span>
+                                </div>
+                            </div>
+                            <div class="box-response-text">
+                                <span class="box-response-text-data">17.06.2020 - 18:45</span>
+                                <div class="box-response-text-description">«Деякі з цих продуктів виглядають дуже заманливо, - зазначає Джонсон-Арбор. - Вони пофарбовані в яскраві кольори і можуть нагадувати сік або інші продукти, з якими дитина звикла грати</div>
+                            </div>                                                       
+                        </div>
+                        <div class="box-response">
+                            <div class="box-response-person">
+                                <div class="box-response-person-img">
+                                    <img style="width: 100px; height: 100px;"src="./img/man.png" alt="man">
+                                </div>
+                                <div class="box-response-person-text">
+                                    <span class="box-response-person-name">Бойко Олександр Володимирович</span>
+                                    <span class="box-response-person-subtitle">Позитивний</span>
+                                </div>
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="box-response-text" style="margin-top: 0;">
+                                <span class="box-response-text-data">17.06.2020 - 18:45</span>
+                                <div class="box-response-text-description">«Деякі з цих продуктів виглядають дуже заманливо, - зазначає Джонсон-Арбор. - Вони пофарбовані в яскраві кольори і можуть нагадувати сік або інші продукти, з якими дитина звикла грати</div>
+                            </div>                                                       
+                        </div>
+                        <div class="box-response">
+                            <div class="box-response-person">
+                                <div class="box-response-person-img">
+                                    <img style="width: 100px; height: 100px;"src="./img/man.png" alt="man">
+                                </div>
+                                <div class="box-response-person-text">
+                                    <span class="box-response-person-name">Бойко Олександр Володимирович</span>
+                                    <span class="box-response-person-subtitle" style="color: #E85164;">Негативний</span>
+                                </div>
+                            </div>
+                            <div class="triangle"></div>
+                            <div class="box-response-text" style="margin-top: 0;">
+                                <span class="box-response-text-data">17.06.2020 - 18:45</span>
+                                <div class="box-response-text-description">«Деякі з цих продуктів виглядають дуже заманливо, - зазначає Джонсон-Арбор. - Вони пофарбовані в яскраві кольори і можуть нагадувати сік або інші продукти, з якими дитина звикла грати</div>
+                            </div>                                                       
+                        </div>
+                    </div>
+                    <button class="menu_about-button">Показати ще</button>    
+                </div>
+                <div class="block-news">
+                    <div class="menu-specialty-title-news" >
+                        <span>Новини клініки (28)</span>
+                    </div>
+                    <div class="news">
+                        <div class="box-news">
+                            <img src="./img/news1.png" alt="news">
+                            <span class="box-news_title">Чи можна буде плавати в морі або басейні під час пандемії?</span>
+                            <div class="box-news-info">
+                                <span class="box-news_time">Сьогодні - 12:48</span>
+                                <div class="box-news-response">
+                                    <img style="width: 14.67px; height: 10px;" src="./img/eye.png" alt="eye">
+                                    <span style="margin-left: 6.67px; margin-right: 13.33px;" class="box-news_communication">345</span>
+                                    <img style="width:13.33px; height:13.33px" src="./img/response1.png" alt="response">
+                                    <span style="margin-left: 7.33px;" class="box-news_communication">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="./img/news2.png" alt="news">
+                            <span class="box-news_title">Майже 30 тисяч українців захворіло ГРВІ минулого тижня</span>
+                            <div class="box-news-info">
+                                <span class="box-news_time">9 днів тому</span>
+                                <div class="box-news-response">
+                                    <img style="width: 14.67px; height: 10px;" src="./img/eye.png" alt="eye">
+                                    <span style="margin-left: 6.67px; margin-right: 13.33px;" class="box-news_communication">345</span>
+                                    <img style="width:13.33px; height:13.33px" src="./img/response1.png" alt="response">
+                                    <span style="margin-left: 7.33px;" class="box-news_communication">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="./img/news3.png" alt="news">
+                            <span class="box-news_title">Препарат «Магне-В6» заборонили в Україні</span>
+                            <div class="box-news-info" style="margin-top: 72px;">
+                                <span class="box-news_time">22.10.2018 - 10:42</span>
+                                <div class="box-news-response">
+                                    <img style="width: 14.67px; height: 10px;" src="./img/eye.png" alt="eye">
+                                    <span style="margin-left: 6.67px; margin-right: 13.33px;" class="box-news_communication">345</span>
+                                    <img style="width:13.33px; height:13.33px" src="./img/response1.png" alt="response">
+                                    <span style="margin-left: 7.33px;" class="box-news_communication">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="./img/news4.png" alt="news">
+                            <span class="box-news_title">Кількість отруєнь дезінфікуючими засобами серед дітей збільшилася під час пандемії</span>
+                            <div class="box-news-info" style="margin-top: 14px;">
+                                <span class="box-news_time">22.10.2018 - 10:42</span>
+                                <div class="box-news-response">
+                                    <img style="width: 14.67px; height: 10px;" src="./img/eye.png" alt="eye">
+                                    <span style="margin-left: 6.67px; margin-right: 13.33px;" class="box-news_communication">345</span>
+                                    <img style="width:13.33px; height:13.33px" src="./img/response1.png" alt="response">
+                                    <span style="margin-left: 7.33px;" class="box-news_communication">4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu_about-button" style="margin-top:41px ;">Показати ще</button>
+                </div>
+        </section>
+        <footer>
+           <div class="download-application">
+               <img class="phones" src="./img/phone2.png" alt="phones">
+               <span class="download-application-text">Завантажуйте наш мобільний додаток</span>
+               <img style="margin-right: 10.25px;"src="./img/button-appstore-ua 1.png" alt="appstore">
+               <img id="googlepay" src="./img/button-google-play-ua (1) 1.png" alt="google pay">
+           </div> 
+           <div class="footer">
+                    <div id="footer-info" style="display: flex;">
+                        <div class="about-company">
+                            <span class="about-company-title">Про компанію</span>
+                            <span class="about-company-text">MoniHeal - це унікальна система, яка дає людині чітку і достовірну уяву про стан свого здоров'я та має на меті попередити користувача про можливі ускладнення.</span>
+                                <div>
+                                    <img src="./img/letter.png" alt="letter">
+                                    <span class="about-company-gmail-phone">helpmoniheal@gmail.com</span>
+                                </div>
+                                <div style="margin-top: 19px;">
+                                    <img src="./img/phone3.png" alt="phone">
+                                    <span class="about-company-gmail-phone">+38 (097) 773 - 73 -73</span>
+                                </div>
+                        </div>
+                        <div class="sections">
+                            <span class="about-company-title">Розділи</span>
+                            <ul style="padding-left: 20px; margin-top: 31px;">
+                                <li class="sections-list">Про нас</li>
+                                <li class="sections-list">Користувачам</li>
+                                <li class="sections-list">Лікарям</li>
+                                <li class="sections-list">Клінікам</li>
+                                <li class="sections-list">Новини</li>
+                                <li class="sections-list">Знайти фахівця</li>
+                                <li class="sections-list">Клініки</li>
+                            </ul>
+                        </div>
+                        <div class="resourse">
+                            <span class="about-company-title">Ресурси</span>
+                            <ul style="padding-left: 20px; margin-top: 31px;">
+                                <li class="sections-list">Захист даних</li>
+                                <li class="sections-list">Політика приватності</li>
+                                <li class="sections-list">Правила користування</li>
+                                <li class="sections-list">Довідковий центр</li>
+                                <li class="sections-list">Зворотній звязок</li>
+                            </ul>
+                        </div>
+                        <div class="social">
+                            <span class="about-company-title">Ми в соцмережах</span>
+                            <span class="about-company-text">Підписуйтесь на наші соцмережі! Будьте в курсі останніх новин, акцій, заходів.</span>
+                            <div>
+                                <img src="./img/icons8-facebook-circled-96 2.png" alt="facebook">
+                                <img src="./img/icons8-instagram-240 2.png" alt="instagram">
+                            </div>
+                        </div>
+                    </div>
+                    <hr id="footer-hr">
+                    <div class="company">
+                        <img id="logotype" src="./img/logotyp-footer.png" alt="logotyp"
+                        ><img id="visa" src="./img/visa.png" alt="visa">
+                    </div>
+                </div>  
+           
+        </footer>
+        <div id="map">
+                    <button class="map-button" id="map-button" onclick="hideMap()">X</button>
+                <div>
+                    <img id="map-img" src="./img/big map.png" alt="map">
+                </div>
+                <div style="width:330px;border: 1px solid #C0D3FE;box-sizing: border-box; ">
+                <div style="display: flex; margin-left:29px; margin-top: 27px;">
+                    <img src="./img/man2.png" alt="man">
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="map-title">Flexis: Рух без болі</span>
+                        <span class="map-text">Медичний центр</span>
+                    </div>
+                </div> 
+                <hr style="height: 1px; width: 325px; color:#D2E1F5 ; margin-top: 27px;"> 
+                <div style="display: flex; justify-content: space-around; margin-top: 7px;">
+                    <div class="block-information">
+                        <span class="block-information_title">Рейтинг</span>
+                        <div class="block-information_img-text">
+                            <img class="block-information_img" src="./img/starblue.png" alt="star">
+                            <span class="block-information_text">4,6</span>
+                        </div>
+                    </div>
+                    <div class="block-information">
+                        <span class="block-information_title">Відкуків</span>
+                        <div class="block-information_img-text">
+                            <img class="block-information_img" src="./img/response.png" alt="response">
+                            <span class="block-information_text">12</span>
+                        </div>
+                    </div>
+                    <div class="block-information">
+                        <span class="block-information_title">Досвід (років)</span>
+                        <div class="block-information_img-text">
+                            <img class="block-information_img" style="width: 13.33px; height: 13.33px;"  src="./img/clockblue.png" alt="clock">
+                            <span class="block-information_text"></span>10
+                        </div>
+                    </div>
+                </div>
+                <hr style="height: 1px; width: 325px; color:#D2E1F5 ; margin-top: 13px;">
+                <div style="display: flex; flex-direction: column; margin: 20px 30px 34px 20px;">
+                    <span class="block-information_title" style="margin-bottom: 3px;">Адреса</span>
+                    <span class="block-doktor-text">м. Київ, вул. Михайла Максимовича (Трутенка), 3, Голосіївський район</span>
+                </div>
+                <div id="menu_time" style="margin-left:29px ; width: 100%;">
+                    <p style="font-weight: 450;font-size: 12px;line-height: 15px;color: #AFB9DD;">Графік роботи</p>
+                    <div class="text-time-map">
+                        <span>Понеділок:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Вівторок:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Середа:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Четвер:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Пятниця:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Субота:</span>
+                        <span style="color: black;"><b>8:30-19:00</b></span>
+                    </div>
+                    <div class="text-time-map">
+                        <span>Неділя:</span>
+                        <span style="color: black;"><b>Вихідний</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gallery">
+            <button class="map-button" id="foto-button" onclick="hideFoto()">X</button>
+            <div style="display: flex; align-items: center ;">
+                <button class="arrow-left" id="arrow-left" style="margin-right: 17px;"><img src="./img/arrow.png" alt="arrow"></button>
+                <div class="photos">
+                    <img src="./img/foto1.png" alt="foto">
+                    <img src="./img/foto2.png" alt="foto">
+                    <img src="./img/foto3.png" alt="foto">
+                    <img src="./img/foto4.png" alt="foto">
+                    <img src="./img/foto5.png" alt="foto">
+                </div>
+                <button class="arrow-right" id="arrow-right" style="margin-left: 17px;"><img src="./img/arrowright.png" alt="arrow"></button>
+            </div>
+            <div style="display: flex;margin-left: 80px;" class="photos-small">
+                <img class="slider-foto-down" id="img1" style="border: 3px solid #2BBB97;" src="./img/foto1.png" alt="foto">
+                <img class="slider-foto-down" id="img2" src="./img/foto2.png" alt="foto">
+                <img class="slider-foto-down" id="img3" src="./img/foto3.png" alt="foto">
+                <img class="slider-foto-down" id="img4" src="./img/foto4.png" alt="foto">
+                <img class="slider-foto-down" id="img5" src="./img/foto5.png" alt="foto">
+            </div>
+        </div>
+        <div id="burger-menu">
+            <img style="width: 100px;height: 100px;"src="./img/parents.png" alt="parents">
+            <span class="burger-menu-pages">Про клініку</span>
+            <span class="burger-menu-pages">Спеціальності</span>
+            <span class="burger-menu-pages">Послуги</span>
+            <span class="burger-menu-pages">Лікарі</span>
+            <span class="burger-menu-pages">Відгуки</span>
+            <span class="burger-menu-pages">Новини</span>
+            <div class="burger-menu-phone">
+                <img style="width: 18px;height: 18px;" src="./img/phone4.png" alt="phone">
+                <span>+38 (050) 137 - 60 - 41</span>
+            </div>
+            <button id="burger-menu-button">Перезвоніть мені</button>
+        </div>
+        <div id="contact-numbers">
+            <div class="contact-numbers-title">
+                <span>Контактні телефони</span>
+                <button style="color: #A7C0E2; background: none; border: none; margin-left: 15px;" onclick="Contact()">X</button>
+            </div>
+            <span class="contact-numbers-phone">+38 (050) 137 - 60 - 41</span>
+            <span class="contact-numbers-phone">+38 (044) 222 - 16 - 19</span>
+            <span class="contact-numbers-phone">+38 (063) 985 - 55 - 55</span>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
+
