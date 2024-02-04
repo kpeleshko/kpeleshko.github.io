@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 32.5em) {
+  html {
+    font-size: 42%;
+  }
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  color: #101010;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 10px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 4.6rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #101010;
+  border-top: 2px solid #101010;
+}
+.section-title--highlight {
+  color: #9D1F14;
+}
+.section-title::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #101010;
+  transform: translateY(-18px);
+}
+
+.text-note {
+  padding-bottom: 2rem;
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.p-2-col {
+  display: flex;
+  justify-content: space-between;
+}
+.p-2-col > p {
+  flex-basis: 48%;
+  text-align: justify;
+}
+
+.section--header {
+  padding: 8rem;
+}
+
+.header-content {
+  display: flex;
+}
+.header-content > div {
+  flex-basis: 50%;
+}
+
+svg {
+  min-width: 360%;
+  top: 20%;
+  left: 0%;
+}
+
+#path {
+  stroke-width: 4;
+}
+
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(img/road-bg.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+section:nth-of-type(2) {
+  background: rgb(232, 227, 214);
+}
+
+svg path {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  stroke-width: 0.4;
+  stroke: #000;
+  fill: none;
+  /* transition: stroke-dashoffset 1s; */
+}/*# sourceMappingURL=slyle.css.map */

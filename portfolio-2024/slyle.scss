@@ -1,0 +1,155 @@
+// COLOR VARIABLES
+$color-main-text: #101010;
+$color-main-highlight: #9D1F14;
+
+$color-secondary: #0e6fb3;
+$color-secondary-light: #eff4f8;
+
+
+
+// FONT VARIABLES
+$font-primary: 'Cabin', sans-serif;
+$font-text: 'PT Serif', serif;
+
+// RESPONSIVE BREAKPOINTS
+//$bp-largest: 75em;   // 1200px
+
+$bp-tablet: 50em;    // 800px;
+$bp-phone: 32.5em;    // 
+//$bp-tiny: 25em;     // 400px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-tablet) {
+        font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-phone) {
+        font-size: 42%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-main-text;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1180px;
+    padding: 10px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 4.6rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-main-text;
+    border-top: 2px solid $color-main-text;
+
+    &--highlight {
+        color: $color-main-highlight;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: $color-main-text;
+        transform: translateY(-18px);
+    }
+}
+
+.secondary-title {
+    font-style: italic;
+    font-size: 4.8rem;
+}
+
+.text-note {
+    padding-bottom: 2rem;
+    font-family: $font-text;
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.p-2-col {
+    display: flex;
+    justify-content: space-between;
+    & > p {
+        flex-basis: 48%;
+        text-align: justify;
+    }
+}
+
+.section--header {
+    padding: 8rem;
+}
+
+.header-content {
+    display: flex;
+
+    & > div {
+        flex-basis: 50%;
+    }
+}
+
+svg {
+    min-width: 360%;
+    top: 20%;
+    left: 0%;
+}
+
+#path {
+    stroke-width: 4;
+}
+
+.svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(img/road-bg.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+section:nth-of-type(2) {
+    background: rgb(232, 227, 214);
+}
+
+svg path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    stroke-width: .4;
+    stroke: #000;
+    fill: none;
+    /* transition: stroke-dashoffset 1s; */
+}
