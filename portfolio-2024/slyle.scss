@@ -1,8 +1,9 @@
 // COLOR VARIABLES
 $color-main-text: #101010;
-$color-main-highlight: #D0C8BB;
+$color-main-text-highlight: #d5cec2;
 $color-secondary: #DB9EB5;
-$color-main-bg: lighten($color-secondary, 25%);
+$color-secondary-lighten: lighten($color-secondary, 25%);
+$color-secondary-darken: darken($color-secondary, 5%);
 $color-small-details: #9D1F14;
 
 $color-secondary-light: #F5F5F5;
@@ -48,7 +49,7 @@ body {
     background-color: $color-secondary-light;
     font-weight: 300;
     line-height: 1.6;
-    //overflow: hidden;
+    overflow-x: hidden;
 }
 #spinner {
     position: fixed;
@@ -125,7 +126,7 @@ img {
     }
     &--highlight {
         //background-image: (45deg, #D0C8BB 0%, transparent 50%, #D0C8BB 100%);
-        background-color: $color-main-highlight;
+        background-color: $color-main-text-highlight;
     }
     &--underline {
       text-decoration: $color-secondary wavy underline;;
@@ -300,7 +301,7 @@ img {
   align-items: center;
     padding: 8rem 1rem;
     border-radius: 5rem;
-    background-color: $color-main-bg;
+    background-color: $color-secondary-lighten;
     //background-image: url('img/projects-bg.svg');
     background-size: contain;
     overflow-x: hidden;
@@ -411,7 +412,7 @@ img {
     margin-top: auto;
     height: 200px;
     width: 300px;
-    background-color: $color-main-highlight;
+    background-color: $color-secondary-darken;
     position: relative;
     display: flex;
     justify-content: center;
@@ -441,7 +442,7 @@ img {
   
   /* Lid when opened */
   .lid.two {
-    border-top: 100px solid $color-main-highlight;
+    border-top: 100px solid $color-secondary-darken;
     transform: rotateX(90deg);
     z-index: 1;
     transition-delay: 0.5s;
@@ -757,18 +758,18 @@ img {
       margin-top: 10rem;
       margin-left: 3rem;
       max-width: 400px;
-      height: 500px;
       @media only screen and (max-width: $bp-tablet) {
         margin: 5rem auto;
       }
       @media only screen and (max-width: $bp-phone) {
         width: 80%;
+        height: 500px;
       }
     }
 
     &__card {
       
-      background-color: $color-main-bg;
+      background-color: $color-secondary-lighten;
       
     }
   }
@@ -820,8 +821,9 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
     font-size: 18px;
-    background-color: $color-main-bg;
+    background-color: $color-secondary-lighten;
     background-repeat: no-repeat;
     box-sizing: border-box;
     border-radius: 20px;
@@ -846,10 +848,7 @@ img {
 
     &__steps {
       max-width: 90%;
-      text-align: left;
-      &--center {
-        text-align: center;
-      }
+      text-align: center;
 
       &--first {
         position: relative;
@@ -866,7 +865,7 @@ img {
       }
       
       @media only screen and (max-width: $bp-phone) {
-        max-width: 80%;
+        max-width: 90%;
      }
       &-title {
         font-family: "PT Serif", serif;
@@ -892,10 +891,10 @@ img {
     }
 
     .handwrite {
-      font-size: 3.5rem;
-      line-height: 4.5rem;
+      font-size: 20px;
+      line-height: 38px;
       transform: translateY(-2rem);
-      color: $color-secondary;
+      color: $color-secondary-darken;
     }
     span.handwrite {
       font-size: 2rem;
@@ -921,31 +920,44 @@ img {
     color: white;
 
     &__img {
-      position: absolute;
-      max-width: 23rem;
-      top: -20%;
+      // position: absolute;
+      max-width: 25rem;
+      // top: -20%;
+      // &--1 { left: 10%;}
+      // &--2 { left: 40%; z-index: 2; }
+      // &--3 { right: 10%; }
 
       @media only screen and (max-width: $bp-phone) {
           min-width: 170px;
           max-width: 170px;
+          &--1 { transform: translateX(20px);}
+          &--2 { z-index: 2; }
+          &--3 { transform: translateX(-30px); }
       }
-
-      &--1 {
-        left: -10%;
-    }
-    &--2 {
-       
-        left: 30%;
-        z-index: 2;
-    }
-    &--3 {
-        right: 0%;
-    }
-
-    }
-
   }
-
+  &__img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @media only screen and (max-width: $bp-phone) {
+      flex-wrap: nowrap;
+      position: absolute;
+      top: -250px;
+  }
+  }
+ 
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-phone) {
+      flex-direction: column-reverse;
+  }
+  }
+  .section-title {
+    margin: 0;
+  }
+}
   .section-consult {
    margin: 10rem 0;
     display: flex;
@@ -970,7 +982,7 @@ img {
       right: -14rem;
       z-index: 10;
       rotate: -8deg;
-      transform: scale(1) translateX(50px);
+      transform: scale(1) translateX(5%);
       height: 60rem;
       width: 40rem;
     }
