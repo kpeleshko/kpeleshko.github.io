@@ -2,12 +2,16 @@
 $color-main-text: #101010;
 $color-main-text-highlight: #d5cec2;
 $color-secondary: #DB9EB5;
+
+//$color-secondary: #DB9EB5;
+//$color-secondary: #000;
 $color-secondary-lighten: lighten($color-secondary, 25%);
 $color-secondary-darken: darken($color-secondary, 5%);
 $color-small-details: #9D1F14;
 
 $color-secondary-light: #F5F5F5;
 $color-grey-decoration: #DEDDDB;
+$color-white: #fff;
 
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -21,7 +25,6 @@ $font-hand: 'Shantell Sans', cursive;
 
 $bp-tablet: 900px;    // 800px;
 $bp-phone: 32.5em;    // 
-//$bp-tiny: 25em;     // 400px
 
 *,
 *::before,
@@ -34,6 +37,7 @@ $bp-phone: 32.5em;    //
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    overflow-x: hidden;
 
     @media only screen and (max-width: $bp-tablet) {
         font-size: 50%;
@@ -49,7 +53,6 @@ body {
     background-color: $color-secondary-light;
     font-weight: 300;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 #spinner {
     position: fixed;
@@ -68,7 +71,6 @@ body {
     }
   }
 a {
-    //text-decoration: none;
     color: inherit;
 }
 
@@ -125,7 +127,6 @@ img {
         }
     }
     &--highlight {
-        //background-image: (45deg, #D0C8BB 0%, transparent 50%, #D0C8BB 100%);
         background-color: $color-main-text-highlight;
     }
     &--underline {
@@ -301,8 +302,7 @@ img {
   align-items: center;
     padding: 8rem 1rem;
     border-radius: 5rem;
-    background-color: $color-secondary-lighten;
-    //background-image: url('img/projects-bg.svg');
+    background-color: $color-white;
     background-size: contain;
     overflow-x: hidden;
 }
@@ -310,6 +310,16 @@ img {
     position: relative;
     width: min-content;
     margin: 10rem 0 5rem 0;
+    .handwrite {
+      z-index: 1;
+      position: absolute;
+      left: 10%;
+      bottom: 40%;
+      padding: 0 2rem 0 0;
+      max-width: 18rem;
+      transform: rotate(-10deg);
+      font-size: 2rem;
+  }
 }
 .magazine {
     position: relative;
@@ -322,16 +332,6 @@ img {
       height: 258px;
       width: 366px;
   }
-
-    &__title {
-        z-index: 1;
-        position: absolute;
-        left: 10%;
-        bottom: 40%;
-        padding: 0 2rem 0 0;
-        max-width: 15rem;
-        transform: rotate(-10deg);
-    }
     &__cursor {
         width: 3rem;
         position: absolute;
@@ -345,57 +345,6 @@ img {
 #magazine.shadow{
   box-shadow: rgba(0, 0, 0, 0.1) -2px 0px 3px 0px inset;
 }
-
-// .page-wrapper {
-//   box-shadow: black 1px 1px 2px 0px;
-// }
-
-// .section-review {
-//     position: relative;
-//     height: 1000svh;
-//     max-height: 1000svh;
-
-//     .section-review__wr {
-//         height: 100%;
-//         transform: translateY(100vh);
-//         transition: transform 1s ease;
-
-//         &.show {
-//             transform: translateY(0);
-//         }
-//     }
-
-//     .section-review__el-wr {
-//         height: 70px;
-//         // position: fixed;
-//         // top: 3%;
-
-//         &--1 {
-//             display: flex;
-//             align-items: end;
-//             flex-direction: column;
-//             justify-content: end;
-//         }
-//     }
-    
-// }
-// .review-envelope {
-//     position: absolute;
-//     bottom: 0;
-//     max-width: 40rem;
-//     &.fix {
-//         position: sticky;
-//         top: 600px;
-//     }
-    
-    
-//     @media only screen and (max-width: $bp-phone) {
-//         max-width: 100%;
-//         min-width: 100%;
-//         padding: 0 2rem;
-//     }
-// }
-
 
 .section-envelope {
     height: 105vh;
@@ -432,7 +381,6 @@ img {
     transition: transform 0.25s linear;
   }
   
-  /* Lid when closed */
   .lid.one {
     border-top: 100px solid $color-secondary;
     transform: rotateX(0deg);
@@ -440,7 +388,6 @@ img {
     transition-delay: 0.75s;
   }
   
-  /* Lid when opened */
   .lid.two {
     border-top: 100px solid $color-secondary-darken;
     transform: rotateX(90deg);
@@ -480,7 +427,7 @@ img {
   }
 
   .message-future {
-    padding: 2rem 0 0 0;
+    padding: 2rem 3rem 0 3rem;
     position: absolute;
     top: 0;
     width: 100%;
@@ -489,12 +436,18 @@ img {
     border-radius: 15px;
     z-index: 1;
     text-align: center;
+    background-image: url('img/letter-bg.jpg');
+    
     & img {width: 70%;}
     &.show {
         animation-name: message-animation-future;
         animation-duration: 20s;
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
+    }
+    .handwrite {
+      padding: 2rem;
+      font-size: 2rem;
     }
   }
   
@@ -553,9 +506,6 @@ img {
     animation-duration: 3s;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    &.hide {
-       // transform: scale(0.5) translateY(0px) translateX(0px)!important;
-    }
   }
   
   .envelope-wrapper .lid.show.one {
@@ -668,14 +618,12 @@ img {
     } 
   }
   }
-  
 
   .section-why {
     min-height: 115vh;
-    margin: 10rem 0;
-    padding: 8rem 0;
+    margin-top: 15rem;
+    //padding-bottom: 15rem;
     border-radius: 5rem;
-    //border: 1px solid $color-main-text;
   }
 
   .circle-step {
@@ -705,6 +653,7 @@ img {
     }
     &__wrapper {
       position: relative;
+      padding-bottom: 15rem;
       display: flex;
       flex-direction: column;
       margin-top: 5rem;
@@ -740,8 +689,10 @@ img {
   }
 
   .section-service {
-    padding-bottom: 5rem;
     overflow: hidden;
+    padding: 8rem 0 5rem 0;
+    border-radius: 5rem;
+    background-color: $color-white;
     &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -762,14 +713,14 @@ img {
         margin: 5rem auto;
       }
       @media only screen and (max-width: $bp-phone) {
-        width: 80%;
+        width: 85%;
         height: 500px;
       }
     }
 
     &__card {
       
-      background-color: $color-secondary-lighten;
+      background-color: $color-white;
       
     }
   }
@@ -827,6 +778,7 @@ img {
     background-repeat: no-repeat;
     box-sizing: border-box;
     border-radius: 20px;
+    border: 1px solid $color-secondary;
     
     &:nth-child(1){ 
       padding: 7rem 2.5rem;
@@ -874,6 +826,7 @@ img {
         line-height: 4.4rem;
       }
       &-text {
+        padding-top: 0;
         font-size: 1.5rem;
         @media only screen and (max-width: $bp-phone) {
           font-size: 2.1rem;
@@ -918,14 +871,10 @@ img {
     padding: 20rem 1rem 8rem 1rem;
     background-color: $color-secondary;
     color: white;
+    overflow-x: clip;
 
     &__img {
-      // position: absolute;
       max-width: 25rem;
-      // top: -20%;
-      // &--1 { left: 10%;}
-      // &--2 { left: 40%; z-index: 2; }
-      // &--3 { right: 10%; }
 
       @media only screen and (max-width: $bp-phone) {
           min-width: 170px;
@@ -987,7 +936,7 @@ img {
       width: 40rem;
     }
     .message-future {
-      padding: 4rem 2rem;
+      padding: 2rem 4rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1000,7 +949,10 @@ img {
         align-self: flex-end;
       }
       p {
-        font-size: 1.8rem;
+        font-size: 2rem;
+      }
+      .handwrite {
+        font-size: 2rem;
       }
     }
   }
@@ -1046,3 +998,34 @@ img {
 // #path {
 //   stroke-width: 4;
 // }
+
+// @keyframes revealOnScroll {
+//   from {
+//     opacity: 0;
+//     transform: translateY(100px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// .reveal-on-scroll {
+//   animation: revealOnScroll ease-in-out both;
+  // -webkit-animation-timeline: view();
+  // -webkit-animation-range: entry 10% cover 50%;
+  // animation-timeline: view();
+  // animation-range: entry 10% cover 50%;
+// }
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .5s ease-in-out;
+}
+
+.reveal-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0px);
+}
+

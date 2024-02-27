@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 900px) {
   html {
@@ -28,7 +29,6 @@ body {
   background-color: #F5F5F5;
   font-weight: 300;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 #spinner {
@@ -279,7 +279,7 @@ img {
   align-items: center;
   padding: 8rem 1rem;
   border-radius: 5rem;
-  background-color: #fefbfc;
+  background-color: #fff;
   background-size: contain;
   overflow-x: hidden;
 }
@@ -289,6 +289,16 @@ img {
   width: -moz-min-content;
   width: min-content;
   margin: 10rem 0 5rem 0;
+}
+.magazine-wr .handwrite {
+  z-index: 1;
+  position: absolute;
+  left: 10%;
+  bottom: 40%;
+  padding: 0 2rem 0 0;
+  max-width: 18rem;
+  transform: rotate(-10deg);
+  font-size: 2rem;
 }
 
 .magazine {
@@ -303,15 +313,6 @@ img {
     height: 258px;
     width: 366px;
   }
-}
-.magazine__title {
-  z-index: 1;
-  position: absolute;
-  left: 10%;
-  bottom: 40%;
-  padding: 0 2rem 0 0;
-  max-width: 15rem;
-  transform: rotate(-10deg);
 }
 .magazine__cursor {
   width: 3rem;
@@ -362,7 +363,6 @@ img {
   transition: transform 0.25s linear;
 }
 
-/* Lid when closed */
 .lid.one {
   border-top: 100px solid #DB9EB5;
   transform: rotateX(0deg);
@@ -370,7 +370,6 @@ img {
   transition-delay: 0.75s;
 }
 
-/* Lid when opened */
 .lid.two {
   border-top: 100px solid #d48ba7;
   transform: rotateX(90deg);
@@ -409,7 +408,7 @@ img {
 }
 
 .message-future {
-  padding: 2rem 0 0 0;
+  padding: 2rem 3rem 0 3rem;
   position: absolute;
   top: 0;
   width: 100%;
@@ -418,6 +417,7 @@ img {
   border-radius: 15px;
   z-index: 1;
   text-align: center;
+  background-image: url("img/letter-bg.jpg");
 }
 .message-future img {
   width: 70%;
@@ -427,6 +427,10 @@ img {
   animation-duration: 20s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+}
+.message-future .handwrite {
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 @keyframes message-animation-1 {
@@ -531,6 +535,7 @@ img {
   animation-direction: normal;
   animation-fill-mode: forwards;
 }
+
 .envelope-wrapper .lid.show.one {
   transform: rotateX(90deg);
   transition-delay: 0s;
@@ -634,8 +639,7 @@ img {
 
 .section-why {
   min-height: 115vh;
-  margin: 10rem 0;
-  padding: 8rem 0;
+  margin-top: 15rem;
   border-radius: 5rem;
 }
 
@@ -671,6 +675,7 @@ img {
 }
 .circle-step__wrapper {
   position: relative;
+  padding-bottom: 15rem;
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
@@ -709,8 +714,10 @@ img {
 }
 
 .section-service {
-  padding-bottom: 5rem;
   overflow: hidden;
+  padding: 8rem 0 5rem 0;
+  border-radius: 5rem;
+  background-color: #fff;
 }
 .section-service__wrapper {
   display: flex;
@@ -736,12 +743,12 @@ img {
 }
 @media only screen and (max-width: 32.5em) {
   .service__wrapper {
-    width: 80%;
+    width: 85%;
     height: 500px;
   }
 }
 .service__card {
-  background-color: #fefbfc;
+  background-color: #fff;
 }
 
 .service__wrapper--1 .service-card:nth-child(2) {
@@ -783,6 +790,7 @@ img {
   background-repeat: no-repeat;
   box-sizing: border-box;
   border-radius: 20px;
+  border: 1px solid #DB9EB5;
 }
 .service-card:nth-child(1) {
   padding: 7rem 2.5rem;
@@ -829,6 +837,7 @@ img {
   line-height: 4.4rem;
 }
 .service-card__steps-text {
+  padding-top: 0;
   font-size: 1.5rem;
 }
 @media only screen and (max-width: 32.5em) {
@@ -871,6 +880,7 @@ img {
   padding: 20rem 1rem 8rem 1rem;
   background-color: #DB9EB5;
   color: white;
+  overflow-x: clip;
 }
 .section-footer__img {
   max-width: 25rem;
@@ -947,7 +957,7 @@ img {
   width: 40rem;
 }
 .section-consult .message-future {
-  padding: 4rem 2rem;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -961,7 +971,10 @@ img {
   align-self: flex-end;
 }
 .section-consult .message-future p {
-  font-size: 1.8rem;
+  font-size: 2rem;
+}
+.section-consult .message-future .handwrite {
+  font-size: 2rem;
 }
 
 .decoration-line {
@@ -991,4 +1004,15 @@ img {
 }
 .decoration-line--left::after {
   left: -20px;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+}
+
+.reveal-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0px);
 }/*# sourceMappingURL=slyle.css.map */
