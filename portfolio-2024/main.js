@@ -2,52 +2,131 @@ document.addEventListener('DOMContentLoaded', function() {
   const spinner = document.getElementById('spinner');
   spinner.style.display = 'none';
 
-  const draggables = document.querySelectorAll('.section-header__img');
-  let highestZIndex = 1;
+//   const draggables = document.querySelectorAll('.section-header__img');
+//   let highestZIndex = 1;
 
-  function handleTouchStart(event) {
-      const draggable = event.target;
-      draggable.style.zIndex = highestZIndex++;
-      draggable.style.transition = 'none';
+//   function handleTouchStart(event) {
+//       const draggable = event.target;
+//       draggable.style.zIndex = highestZIndex++;
+//       draggable.style.transition = 'none';
 
-      const touch = event.targetTouches[0];
-      let initialX = touch.clientX - draggable.getBoundingClientRect().left;
-      let initialY = touch.clientY - draggable.getBoundingClientRect().top;
+//       const touch = event.targetTouches[0];
+//       let initialX = touch.clientX - draggable.getBoundingClientRect().left;
+//       let initialY = touch.clientY - draggable.getBoundingClientRect().top;
 
-      function onTouchMove(event) {
-          const touch = event.targetTouches[0];
-          let newX = touch.clientX - initialX;
-          let newY = touch.clientY - initialY;
+//       function onTouchMove(event) {
+//           const touch = event.targetTouches[0];
+//           let newX = touch.clientX - initialX;
+//           let newY = touch.clientY - initialY;
 
-          newX = Math.min(Math.max(newX, 0), window.innerWidth - draggable.offsetWidth);
-          newY = Math.min(Math.max(newY, 0), window.innerHeight - draggable.offsetHeight);
+//           newX = Math.min(Math.max(newX, 0), window.innerWidth - draggable.offsetWidth);
+//           newY = Math.min(Math.max(newY, 0), window.innerHeight - draggable.offsetHeight);
 
-          draggable.style.left = newX + 'px';
-          draggable.style.top = newY + 'px';
+//           draggable.style.left = newX + 'px';
+//           draggable.style.top = newY + 'px';
 
-          event.preventDefault();
-      }
+//           event.preventDefault();
+//       }
 
-      function onTouchEnd() {
-          document.removeEventListener('touchmove', onTouchMove);
-          document.removeEventListener('touchend', onTouchEnd);
-          document.removeEventListener('touchmove', preventScroll);
-      }
+//       function onTouchEnd() {
+//           document.removeEventListener('touchmove', onTouchMove);
+//           document.removeEventListener('touchend', onTouchEnd);
+//           document.removeEventListener('touchmove', preventScroll);
+//       }
 
-      document.addEventListener('touchmove', onTouchMove);
-      document.addEventListener('touchend', onTouchEnd);
-      document.addEventListener('touchmove', preventScroll);
-  }
+//       document.addEventListener('touchmove', onTouchMove);
+//       document.addEventListener('touchend', onTouchEnd);
+//       document.addEventListener('touchmove', preventScroll);
+//   }
 
-  function handleTouchMove(event) {
-      event.preventDefault();
-  }
+//   function handleTouchMove(event) {
+//       event.preventDefault();
+//   }
 
-  draggables.forEach(draggable => {
-      draggable.classList.add('on');
-      draggable.addEventListener('touchstart', handleTouchStart);
-      draggable.addEventListener('touchmove', handleTouchMove);
-  });
+//   draggables.forEach(draggable => {
+//       draggable.classList.add('on');
+//       draggable.addEventListener('touchstart', handleTouchStart);
+//       draggable.addEventListener('touchmove', handleTouchMove);
+//   });
+
+const draggables = document.querySelectorAll('.section-header__img');
+let highestZIndex = 1;
+
+function handleTouchStart(event) {
+    const draggable = event.target;
+    draggable.style.zIndex = highestZIndex++;
+    draggable.style.transition = 'none';
+
+    const touch = event.targetTouches[0];
+    let initialX = touch.clientX - draggable.getBoundingClientRect().left;
+    let initialY = touch.clientY - draggable.getBoundingClientRect().top;
+
+    function onTouchMove(event) {
+        const touch = event.targetTouches[0];
+        let newX = touch.clientX - initialX;
+        let newY = touch.clientY - initialY;
+
+        newX = Math.min(Math.max(newX, 0), window.innerWidth - draggable.offsetWidth);
+        newY = Math.min(Math.max(newY, 0), window.innerHeight - draggable.offsetHeight);
+
+        draggable.style.left = newX + 'px';
+        draggable.style.top = newY + 'px';
+
+        event.preventDefault();
+    }
+
+    function onTouchEnd() {
+        document.removeEventListener('touchmove', onTouchMove);
+        document.removeEventListener('touchend', onTouchEnd);
+        document.removeEventListener('touchmove', preventScroll);
+    }
+
+    document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('touchend', onTouchEnd);
+    document.addEventListener('touchmove', preventScroll);
+}
+
+function handleTouchMove(event) {
+    event.preventDefault();
+}
+
+function handleMouseDown(event) {
+    const draggable = event.target;
+    draggable.style.zIndex = highestZIndex++;
+    draggable.style.transition = 'none';
+
+    let initialX = event.clientX - draggable.getBoundingClientRect().left;
+    let initialY = event.clientY - draggable.getBoundingClientRect().top;
+
+    function onMouseMove(event) {
+        let newX = event.clientX - initialX;
+        let newY = event.clientY - initialY;
+
+        newX = Math.min(Math.max(newX, 0), window.innerWidth - draggable.offsetWidth);
+        newY = Math.min(Math.max(newY, 0), window.innerHeight - draggable.offsetHeight);
+
+        draggable.style.left = newX + 'px';
+        draggable.style.top = newY + 'px';
+    }
+
+    function onMouseUp() {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+}
+
+draggables.forEach(draggable => {
+    draggable.classList.add('on');
+    draggable.addEventListener('touchstart', handleTouchStart);
+    draggable.addEventListener('touchmove', handleTouchMove);
+    draggable.addEventListener('mousedown', handleMouseDown);
+});
+
+
+  //
 
   const draggablesmessage = document.querySelectorAll('.draggable');
   let highestMessageZIndex = 7;

@@ -319,7 +319,15 @@ img {
       max-width: 18rem;
       transform: rotate(-10deg);
       font-size: 2rem;
-  }
+    }
+    .handwrite.magazine__cursor {
+      transform: rotate(-80deg);
+      bottom: 0rem;
+      right: 0;
+      left: auto;
+      z-index: 10;
+    }
+
 }
 .magazine {
     position: relative;
@@ -332,13 +340,6 @@ img {
       height: 258px;
       width: 366px;
   }
-    &__cursor {
-        width: 3rem;
-        position: absolute;
-        bottom: -2.5rem;
-        right: 0;
-        z-index: 10;
-    }
 }
 
 #magazine .shadow,
@@ -749,11 +750,11 @@ img {
    .service__wrapper--2 {
     .service-card {
       &:nth-child(2),
-      &:nth-child(3),
       &:nth-child(6),
       &:nth-child(9) { 
         align-items: center;
       }
+      &:nth-child(3),
       &:nth-child(4),
       &:nth-child(9) { 
         justify-content: space-around;
@@ -824,6 +825,7 @@ img {
         font-weight: 500;
         font-size: 3.4rem;
         line-height: 4.4rem;
+        padding-bottom: 2rem;
       }
       &-text {
         padding-top: 0;
@@ -845,7 +847,7 @@ img {
 
     .handwrite {
       font-size: 20px;
-      line-height: 38px;
+      line-height: 28px;
       transform: translateY(-2rem);
       color: $color-secondary-darken;
     }
@@ -964,10 +966,10 @@ img {
     width: 1px;
     background-color: $color-grey-decoration;
     &--right {
-      right: 18vw;
+      right: 12vw;
     }
     &--left {
-      left: 18vw;
+      left: 12vw;
     }
     &::after {
       content: '';

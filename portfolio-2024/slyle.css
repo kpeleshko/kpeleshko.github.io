@@ -300,6 +300,13 @@ img {
   transform: rotate(-10deg);
   font-size: 2rem;
 }
+.magazine-wr .handwrite.magazine__cursor {
+  transform: rotate(-80deg);
+  bottom: 0rem;
+  right: 0;
+  left: auto;
+  z-index: 10;
+}
 
 .magazine {
   position: relative;
@@ -313,13 +320,6 @@ img {
     height: 258px;
     width: 366px;
   }
-}
-.magazine__cursor {
-  width: 3rem;
-  position: absolute;
-  bottom: -2.5rem;
-  right: 0;
-  z-index: 10;
 }
 
 #magazine .shadow,
@@ -768,10 +768,10 @@ img {
   justify-content: space-around;
 }
 
-.service__wrapper--2 .service-card:nth-child(2), .service__wrapper--2 .service-card:nth-child(3), .service__wrapper--2 .service-card:nth-child(6), .service__wrapper--2 .service-card:nth-child(9) {
+.service__wrapper--2 .service-card:nth-child(2), .service__wrapper--2 .service-card:nth-child(6), .service__wrapper--2 .service-card:nth-child(9) {
   align-items: center;
 }
-.service__wrapper--2 .service-card:nth-child(4), .service__wrapper--2 .service-card:nth-child(9) {
+.service__wrapper--2 .service-card:nth-child(3), .service__wrapper--2 .service-card:nth-child(4), .service__wrapper--2 .service-card:nth-child(9) {
   justify-content: space-around;
 }
 .service__wrapper--2 .service-card:nth-child(6) .handwrite {
@@ -835,6 +835,7 @@ img {
   font-weight: 500;
   font-size: 3.4rem;
   line-height: 4.4rem;
+  padding-bottom: 2rem;
 }
 .service-card__steps-text {
   padding-top: 0;
@@ -856,7 +857,7 @@ img {
 }
 .service-card .handwrite {
   font-size: 20px;
-  line-height: 38px;
+  line-height: 28px;
   transform: translateY(-2rem);
   color: #d48ba7;
 }
@@ -985,10 +986,10 @@ img {
   background-color: #DEDDDB;
 }
 .decoration-line--right {
-  right: 18vw;
+  right: 12vw;
 }
 .decoration-line--left {
-  left: 18vw;
+  left: 12vw;
 }
 .decoration-line::after {
   content: "";
