@@ -31,7 +31,15 @@ body {
   line-height: 1.6;
 }
 
-#spinner {
+.spinner-bg {
+  height: 100%;
+  width: 100%;
+  background-color: #DEDDDB;
+  z-index: 10;
+  position: absolute;
+}
+
+.spinner {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -106,16 +114,18 @@ img {
   background-color: #d5cec2;
 }
 .section-title--underline {
-  -webkit-text-decoration: #DB9EB5 wavy underline;
-          text-decoration: #DB9EB5 wavy underline;
+  background-color: #f7e8ee;
 }
 .section-title--italic {
   font-style: italic;
   font-weight: 400;
 }
+.section-title--bigger {
+  font-weight: 600;
+}
 @media only screen and (max-width: 32.5em) {
   .section-title {
-    max-width: 37.5rem;
+    max-width: 70vw;
   }
   .section-title--wider {
     max-width: 40rem;
@@ -272,6 +282,9 @@ img {
     left: -5%;
   }
 }
+.section-header .section-title {
+  margin-top: 10rem;
+}
 
 .section-projects {
   display: flex;
@@ -320,6 +333,13 @@ img {
     height: 258px;
     width: 366px;
   }
+}
+.magazine-link {
+  position: absolute;
+  right: 1rem;
+  top: -1rem;
+  font-size: 12px;
+  font-family: "Shantell Sans", cursive;
 }
 
 #magazine .shadow,
@@ -435,7 +455,7 @@ img {
 
 @keyframes message-animation-1 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.3) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
@@ -446,40 +466,40 @@ img {
 }
 @keyframes message-animation-2 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.1) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
   }
   100% {
-    transform: scale(1) translateY(-65vh) translateX(15vw);
+    transform: scale(1) translateY(-68vh) translateX(14vw);
   }
 }
 @keyframes message-animation-3 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.3) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
   }
   100% {
-    transform: scale(1) translateY(-58vh) translateX(-5vw);
+    transform: scale(1) translateY(-60vh) translateX(-8vw);
   }
 }
 @keyframes message-animation-4 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.3) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
   }
   100% {
-    transform: scale(1) translateY(-45vh) translateX(10vw);
+    transform: scale(1) translateY(-52vh) translateX(5vw);
   }
 }
 @keyframes message-animation-5 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.3) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
@@ -490,13 +510,24 @@ img {
 }
 @keyframes message-animation-6 {
   0% {
-    transform: scale(0.4) translateY(0px) translateX(0px);
+    transform: scale(0.3) translateY(0px) translateX(0px);
   }
   30% {
     transform: scale(1) translateY(-200px) translateX(0px);
   }
   100% {
-    transform: scale(1) translateY(-30vh) translateX(-12vw);
+    transform: scale(1) translateY(-30vh) translateX(-16vw);
+  }
+}
+@keyframes message-animation-7 {
+  0% {
+    transform: scale(0.3) translateY(0px) translateX(0px);
+  }
+  30% {
+    transform: scale(1) translateY(-200px) translateX(0px);
+  }
+  100% {
+    transform: scale(1) translateY(-29vh) translateX(17vw);
   }
 }
 @keyframes message-animation-future {
@@ -516,15 +547,6 @@ img {
     transform: translateY(20px);
   }
 }
-.reverse-animation {
-  animation-name: reverse-message-animation-1; /* Specify the animation name for reverse playback */
-  animation-duration: 1s; /* Set animation duration */
-  animation-fill-mode: forwards; /* Keep styles from last keyframe after animation ends */
-  animation-direction: reverse; /* Play animation in reverse direction */
-  animation-play-state: running;
-  transition: transform 0.5s ease-in-out;
-}
-
 .messages {
   z-index: 5;
   position: absolute;
@@ -534,6 +556,8 @@ img {
   animation-duration: 3s;
   animation-direction: normal;
   animation-fill-mode: forwards;
+  transform: scale(0.25);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .envelope-wrapper .lid.show.one {
@@ -739,6 +763,7 @@ img {
 @media only screen and (max-width: 900px) {
   .service__wrapper {
     margin: 5rem auto;
+    height: 500px;
   }
 }
 @media only screen and (max-width: 32.5em) {
@@ -951,7 +976,7 @@ img {
   bottom: 0;
   top: auto;
   right: -14rem;
-  z-index: 10;
+  z-index: 20;
   rotate: -8deg;
   transform: scale(1) translateX(5%);
   height: 60rem;
@@ -967,12 +992,13 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .section-consult .message-future--name {
   align-self: flex-end;
 }
 .section-consult .message-future p {
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 .section-consult .message-future .handwrite {
   font-size: 2rem;
@@ -1010,10 +1036,26 @@ img {
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(100px);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
-
 .reveal-on-scroll.show {
   opacity: 1;
   transform: translateY(0px);
+}
+
+.show-more-btn {
+  margin-top: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.show-more-content {
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.show-more-content.show {
+  height: 100%;
+  opacity: 1;
 }/*# sourceMappingURL=slyle.css.map */

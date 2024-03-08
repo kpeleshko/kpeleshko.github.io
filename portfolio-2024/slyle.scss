@@ -1,10 +1,9 @@
-// COLOR VARIABLES
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 $color-main-text: #101010;
 $color-main-text-highlight: #d5cec2;
+// $color-secondary: #d5cec2;  
 $color-secondary: #DB9EB5;
-
-//$color-secondary: #DB9EB5;
-//$color-secondary: #000;
 $color-secondary-lighten: lighten($color-secondary, 25%);
 $color-secondary-darken: darken($color-secondary, 5%);
 $color-small-details: #9D1F14;
@@ -13,18 +12,12 @@ $color-secondary-light: #F5F5F5;
 $color-grey-decoration: #DEDDDB;
 $color-white: #fff;
 
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-// FONT VARIABLES
 $font-primary: 'Roboto', sans-serif;
 $font-text: 'PT Serif', serif;
 $font-hand: 'Shantell Sans', cursive;
 
-// RESPONSIVE BREAKPOINTS
-//$bp-largest: 75em;   // 1200px
-
-$bp-tablet: 900px;    // 800px;
-$bp-phone: 32.5em;    // 
+$bp-tablet: 900px;
+$bp-phone: 32.5em; 
 
 *,
 *::before,
@@ -36,7 +29,7 @@ $bp-phone: 32.5em;    //
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    font-size: 62.5%;
     overflow-x: hidden;
 
     @media only screen and (max-width: $bp-tablet) {
@@ -54,7 +47,14 @@ body {
     font-weight: 300;
     line-height: 1.6;
 }
-#spinner {
+.spinner-bg {
+  height: 100%;
+  width: 100%;
+  background-color: $color-grey-decoration;
+  z-index: 10;
+  position: absolute;
+}
+.spinner {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -130,14 +130,18 @@ img {
         background-color: $color-main-text-highlight;
     }
     &--underline {
-      text-decoration: $color-secondary wavy underline;;
+      background-color: lighten($color-secondary, 20%);
     }
     &--italic {
       font-style: italic;
       font-weight: 400;
     }
+    &--bigger {
+      font-weight: 600;
+      // font-size: 3rem;
+    }
     @media only screen and (max-width: $bp-phone) {
-        max-width: 37.5rem;
+        max-width: 70vw;
         &--wider {
             max-width: 40rem;
         }
@@ -294,6 +298,9 @@ img {
         }
        
     }
+    .section-title {
+      margin-top: 10rem;
+    }
 }
 
 .section-projects {
@@ -339,6 +346,13 @@ img {
     @media only screen and (max-width: $bp-phone) {
       height: 258px;
       width: 366px;
+  }
+  &-link {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    font-size: 14px;
+    font-family: $font-hand;
   }
 }
 
@@ -453,34 +467,39 @@ img {
   }
   
   @keyframes message-animation-1 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
     100% {transform: scale(1) translateY(-75vh) translateX(-15vw);}
   }
   @keyframes message-animation-2 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.1) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
-    100% {transform: scale(1) translateY(-65vh) translateX(15vw);}
+    100% {transform: scale(1) translateY(-68vh) translateX(14vw);}
   }
   @keyframes message-animation-3 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
-    100% {transform: scale(1) translateY(-58vh) translateX(-5vw);}
+    100% {transform: scale(1) translateY(-60vh) translateX(-8vw);}
   }
   @keyframes message-animation-4 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
-    100% {transform: scale(1) translateY(-45vh) translateX(10vw);}
+    100% {transform: scale(1) translateY(-52vh) translateX(5vw);}
   }
   @keyframes message-animation-5 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
     100% {transform: scale(1) translateY(-40vh) translateX(-10vw);}
   }
   @keyframes message-animation-6 {
-    0% {transform: scale(0.4) translateY(0px) translateX(0px);}
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
     30% {transform: scale(1) translateY(-200px) translateX(0px);}
-    100% {transform: scale(1) translateY(-30vh) translateX(-12vw);}
+    100% {transform: scale(1) translateY(-30vh) translateX(-16vw);}
+  }
+  @keyframes message-animation-7 {
+    0% {transform: scale(0.3) translateY(0px) translateX(0px);}
+    30% {transform: scale(1) translateY(-200px) translateX(0px);}
+    100% {transform: scale(1) translateY(-29vh) translateX(17vw);}
   }
   @keyframes message-animation-future {
     0% {transform: translateY(20px);}
@@ -489,14 +508,6 @@ img {
     70% {transform: translateY(-20px);}
     100% {transform: translateY(20px);}
   }
-  .reverse-animation {
-    animation-name: reverse-message-animation-1; /* Specify the animation name for reverse playback */
-    animation-duration: 1s; /* Set animation duration */
-    animation-fill-mode: forwards; /* Keep styles from last keyframe after animation ends */
-    animation-direction: reverse; /* Play animation in reverse direction */
-    animation-play-state: running;
-    transition: transform 0.5s ease-in-out;
-}
 
   .messages {
     z-index: 5;
@@ -507,6 +518,8 @@ img {
     animation-duration: 3s;
     animation-direction: normal;
     animation-fill-mode: forwards;
+    transform: scale(0.25);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .1);
   }
   
   .envelope-wrapper .lid.show.one {
@@ -712,6 +725,7 @@ img {
       max-width: 400px;
       @media only screen and (max-width: $bp-tablet) {
         margin: 5rem auto;
+        height: 500px;
       }
       @media only screen and (max-width: $bp-phone) {
         width: 85%;
@@ -931,7 +945,7 @@ img {
       bottom: 0;
       top: auto;
       right: -14rem;
-      z-index: 10;
+      z-index: 20;
       rotate: -8deg;
       transform: scale(1) translateX(5%);
       height: 60rem;
@@ -947,11 +961,12 @@ img {
       background-repeat: no-repeat;
       background-size: cover;
       align-items: center;
+      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .1);
       &--name {
         align-self: flex-end;
       }
       p {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
       .handwrite {
         font-size: 2rem;
@@ -988,45 +1003,28 @@ img {
     }
   }
 
-//   svg path {
-//     stroke-dasharray: 0;
-//     stroke-dashoffset: 0;
-//     stroke-width: .4;
-//     stroke: #000;
-//     fill: none;
-//     /* transition: stroke-dashoffset 1s; */
-// }
-
-// #path {
-//   stroke-width: 4;
-// }
-
-// @keyframes revealOnScroll {
-//   from {
-//     opacity: 0;
-//     transform: translateY(100px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-// .reveal-on-scroll {
-//   animation: revealOnScroll ease-in-out both;
-  // -webkit-animation-timeline: view();
-  // -webkit-animation-range: entry 10% cover 50%;
-  // animation-timeline: view();
-  // animation-range: entry 10% cover 50%;
-// }
-
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(100px);
-  transition: all .5s ease-in-out;
+  transition: all .8s ease-in-out;
+  &.show {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-.reveal-on-scroll.show {
-  opacity: 1;
-  transform: translateY(0px);
+.show-more-btn {
+  margin-top: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.show-more-content {
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  &.show {
+    height: 100%;
+    opacity: 1;
+  }
 }
