@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Covered Section</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+        }
+
+        .section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            scroll-snap-align: start;
+            overflow: hidden;
+            background-image: url('final-vector.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .section--2,
+        .section--4 {
+            background-image: url('vector1234.svg');
+        }
+
+        .content {
+            z-index: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .section.active::before {
+            height: 0%;
+            transition-delay: 0s;
+        }
+
+        h2 {
+            font-size: 64px;
+            color: white;
+        }
+
+        .svg-container {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .svg-container--1 {
+            background-image: url('frame1.png');
+        }
+
+        .svg-container--2 {
+            background-image: url('frame21.png');
+        }
+
+        .svg-container--3 {
+            background-image: url('frame3.png');
+        }
+
+        .svg-container--4 {
+            background-image: url('frame4.png');
+        }
+
+        .section[data-direction="up"]::before {
+            bottom: auto;
+            top: 0;
+        }
+
+        .animation-wrapper--left .svg-container {
+            right: -30px;
+            left: auto;
+        }
+
+        .section::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            transition: all 1s ease;
+            transition-delay: 1s;
+        }
+   
+        svg {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section section--1">
+            <div class="svg-container svg-container--1"></div>
+        </div>
+        <div class="section section--2">
+            <div class="svg-container svg-container--2"></div>
+        </div>
+        <div class="section section--3">
+            <div class="svg-container svg-container--3"></div>
+        </div>
+        <div class="section section--4">
+            <div class="svg-container svg-container--4"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var activeSectionIndex = -1; // Initialize active section index
+
+            function handleIntersection(entries) {
+                entries.forEach(function (entry) {
+                    var section = entry.target;
+                    var currentIndex = Array.from(section.parentNode.children).indexOf(section); // Get index of current section
+
+                    if (entry.isIntersecting) {
+                        section.classList.add('active');
+
+                        if (currentIndex !== activeSectionIndex) {
+                            var scrollDirection = currentIndex > activeSectionIndex ? 'down' : 'up';
+                            console.log('Scroll direction:', scrollDirection);
+                            section.dataset.direction = scrollDirection;
+                        }
+                        activeSectionIndex = currentIndex;
+                    } else {
+                        // setTimeout(() => {
+                        section.classList.remove('active');
+                        // }, "500");
+                    }
+
+                    // Perform your animation or action here
+                    if (entry.intersectionRatio >= 0.5) {
+                        console.log('Section is in viewport:', section.textContent);
+                    }
+                });
+            }
+
+            // Create a new IntersectionObserver
+            var observer = new IntersectionObserver(handleIntersection, {
+                threshold: 0.5 // Trigger when 50% or more of the section is visible
+            });
+
+            // Get all sections
+            var sections = document.querySelectorAll('.section');
+
+            // Observe each section
+            sections.forEach(function (section) {
+                observer.observe(section);
+            });
+
+
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+    .section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        scroll-snap-align: start;
+        /* overflow: hidden; */
+    }
+    .section.active .svg-container::after {
+        height: 0%;
+        transition-delay: 0s;
+    }
+    
+    h2 {
+        font-size: 64px;
+        color: white;
+    }
+    .svg-container {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        left: -30px;
+    }
+    .svg-container[data-direction="up"]::after {
+        bottom: auto;
+        top: 0;
+    }
+    .animation-wrapper--left .svg-container {
+        right: -30px;
+        left: auto;
+    }
+    .svg-container::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        transition: all 1s ease;
+        transition-delay: 1s;
+    }
+    .animation-wrapper {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        max-width: 60%;
+        right: 0;
+    }
+    .animation-wrapper--left {
+        right: auto;
+        left: 0;
+    }
+    .animation-wrapper img {
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: 0%;
+    }
+    .animation-wrapper--left img {
+        object-position: 100%;
+    }
+    svg {
+        height: 100%;
+    }
+    @keyframes move {
+        from { 
+            offset: 0%;
+        }
+
+        to {
+            offset: 100%;
+        }
+    }
+    .offset-animation {
+        animation: move 3s linear infinite;
+    }
+</style>
+<body>
+    <div class="container">
+        <section class="section">
+            <h2>It is Section 1</h2>
+            <div class="animation-wrapper">
+                <img src="img1.png" alt="img">
+                <div class="svg-container">
+                    <svg viewBox="0 0 295 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148 797.512C148 549.175 279.498 526.536 261.706 451.733C243.914 376.93 79.8817 383.244 38.3151 280.755C-3.25152 178.267 148 181.201 148 -1.00852e-05" stroke="#E6E6E3" stroke-width="62" stroke-linecap="round"/>
+                    </svg>   
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>It is Section 2</h2>
+            <div class="animation-wrapper animation-wrapper--left">
+                <img src="img2.png" alt="img">
+                <div class="svg-container">
+                    <svg width="16" height="16" viewBox="0 0 16 16">
+                        <defs>
+                         
+                          <linearGradient id="star-gradient" x1="0">
+                            <stop offset="0%" stop-color="orange" />
+                            <stop class="offset-animation" offset="50%" stop-color="orange"/>
+                            <stop class="offset-animation" offset="50%" stop-color="grey"/>
+                            <stop offset="100%" stop-color="grey" />
+                            <animate attributeName="x1" dur="5s" from="-100%" to="100%" repeatCount="indefinite" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M12.9211 15.0599L7.98318 11.7455L3.0368 15.0347L4.83701 9.57519L0 6.14301L6.04837 6.07571L8.00841 0.666672L9.94322 6.08413L16 6.17666L11.1378 9.59201L12.9211 15.0599Z" fill="url(#star-gradient)"/>
+                      </svg>
+                </div>
+            </div>
+        </section>
+       
+        <section class="section">
+            <h2>It is Section 3</h2>
+            <div class="animation-wrapper">
+                <img src="img1.png" alt="img">
+                <div class="svg-container">
+                    <svg viewBox="0 0 295 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M148 797.512C148 549.175 279.498 526.536 261.706 451.733C243.914 376.93 79.8817 383.244 38.3151 280.755C-3.25152 178.267 148 181.201 148 -1.00852e-05" stroke="#E6E6E3" stroke-width="62" stroke-linecap="round"/>
+                    </svg>   
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>It is Section 4</h2>
+            <div class="animation-wrapper animation-wrapper--left">
+                <img src="img2.png" alt="img">
+                <div class="svg-container">
+                    <svg viewBox="0 0 295 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M147 800C147 540.921 15.5018 526.536 33.294 451.733C51.0861 376.93 215.118 383.244 256.685 280.755C298.251 178.267 147 173.579 147 -1.00852e-05" stroke="#E6E6E3" stroke-width="62" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var activeSectionIndex = -1; // Initialize active section index
+
+function handleIntersection(entries) {
+    entries.forEach(function(entry) {
+        var section = entry.target;
+        var currentIndex = Array.from(section.parentNode.children).indexOf(section); // Get index of current section
+
+        if (entry.isIntersecting) {
+            section.classList.add('active');
+           
+            if (currentIndex !== activeSectionIndex) {
+                var scrollDirection = currentIndex > activeSectionIndex ? 'down' : 'up';
+                console.log('Scroll direction:', scrollDirection);
+                section.querySelector('.svg-container').dataset.direction = scrollDirection;
+            }
+            activeSectionIndex = currentIndex;
+        } else {
+            // setTimeout(() => {
+                section.classList.remove('active');
+            // }, "500");
+        }
+
+        // Perform your animation or action here
+        if (entry.intersectionRatio >= 0.5) {
+            console.log('Section is in viewport:', section.textContent);
+        }
+    });
+}
+
+// Create a new IntersectionObserver
+var observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.5 // Trigger when 50% or more of the section is visible
+});
+
+// Get all sections
+var sections = document.querySelectorAll('.section');
+
+// Observe each section
+sections.forEach(function(section) {
+    observer.observe(section);
+});
+
+
+    });
+</script>
+</body>
+</html> -->
